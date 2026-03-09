@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/hooks/use-theme";
 
 const navItems = [
   { label: "Profile", href: "#profile" },
@@ -12,11 +13,11 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("profile");
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
-
       const sections = ["profile", "projects", "stacks"];
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id);
@@ -32,8 +33,7 @@ const Navbar = () => {
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   return (
@@ -48,7 +48,6 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-        {/* Logo */}
         <motion.a
           href="#profile"
           onClick={(e) => { e.preventDefault(); scrollTo("#profile"); }}
@@ -61,7 +60,6 @@ const Navbar = () => {
           <span className="text-secondary text-glow-pink">_</span>
         </motion.a>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-1">
           {navItems.map((item) => (
             <motion.button
@@ -85,19 +83,47 @@ const Navbar = () => {
               )}
             </motion.button>
           ))}
+
+          {/* Theme toggle */}
+          <motion.button
+            onClick={toggle}
+            className="ml-2 p-2 text-muted-foreground hover:text-primary transition-colors"
+            whileHover={{ scale: 1.1, rotate: 15 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Toggle theme"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={theme}
+                initial={{ y: -10, opacity: 0, rotate: -90 }}
+                animate={{ y: 0, opacity: 1, rotate: 0 }}
+                exit={{ y: 10, opacity: 0, rotate: 90 }}
+                transition={{ duration: 0.2 }}
+              >
+                {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+              </motion.div>
+            </AnimatePresence>
+          </motion.button>
         </div>
 
-        {/* Mobile toggle */}
-        <motion.button
-          className="md:hidden text-foreground p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          whileTap={{ scale: 0.9 }}
-        >
-          {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-        </motion.button>
+        <div className="flex md:hidden items-center gap-2">
+          <motion.button
+            onClick={toggle}
+            className="p-2 text-muted-foreground hover:text-primary transition-colors"
+            whileTap={{ scale: 0.9 }}
+          >
+            {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </motion.button>
+          <motion.button
+            className="text-foreground p-2"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            whileTap={{ scale: 0.9 }}
+          >
+            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          </motion.button>
+        </div>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
