@@ -85,6 +85,8 @@ const HeroSection = () => {
           >
             My Stacks
           </motion.a>
+          </div>
+          <StatusBadge />
         </motion.div>
       </div>
 

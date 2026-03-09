@@ -21,7 +21,7 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
-      const sections = ["profile", "projects", "stacks"];
+      const sections = ["profile", "projects", "stacks", "contact"];
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top <= 120) {
