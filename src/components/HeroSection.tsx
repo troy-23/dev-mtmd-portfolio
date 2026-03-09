@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import ParticleField from "./ParticleField";
 
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
