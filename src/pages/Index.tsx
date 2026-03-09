@@ -4,7 +4,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import StacksSection from "@/components/StacksSection";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
-import CursorFollower from "@/components/CursorFollower";
+import SplashCursor from "@/components/SplashCursor";
 
 const Index = () => {
   return (
