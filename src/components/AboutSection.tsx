@@ -3,11 +3,12 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const skills = [
+    { label: "focus", value: "Prompt Engineering" },
     { label: "frontend", value: "React / TypeScript" },
     { label: "styling", value: "Tailwind CSS" },
     { label: "backend", value: "Supabase / Node" },
     { label: "tools", value: "Lovable / Cursor", isSecondary: true },
-    { label: "vibes", value: "immaculate ✓", isGreen: true },
+    { label: "mindset", value: "AI-first ✓", isGreen: true },
   ];
 
   return (
@@ -19,7 +20,7 @@ const AboutSection = () => {
               // about
             </span>
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mt-2">
-              The <span className="text-secondary text-glow-pink">vibe</span>
+              The <span className="text-secondary text-glow-pink">story</span>
             </h2>
           </div>
         </ScrollReveal>
@@ -28,12 +29,13 @@ const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                I'm a vibecoder — I build web apps by channeling creative energy into code.
-                Every project starts with a feeling and ends with a product that moves people.
+                Hey, I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — an aspiring prompt engineer and AI-first developer. My journey started with curiosity about how AI can transform the way we build software, and it quickly became a passion.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                My stack is whatever gets the vibe right. React, TypeScript, Tailwind,
-                and a healthy dose of AI-assisted development. The future is now.
+                I specialize in crafting precise prompts and leveraging AI tools like Lovable and Cursor to turn ideas into fully functional web applications — faster and smarter. I believe the future of development is collaborative: humans guiding AI to create remarkable things.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Every project I build is a step deeper into the AI development landscape — from e-commerce platforms to fitness apps, I'm constantly exploring what's possible when creativity meets intelligent tooling.
               </p>
             </div>
           </ScrollReveal>
