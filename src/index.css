@@ -153,6 +153,58 @@
   }
 }
 
+/* ElectricBorder styles */
+.electric-border {
+  --electric-light-color: var(--electric-border-color, #00ffd1);
+  position: relative;
+  border-radius: inherit;
+  overflow: visible;
+  isolation: isolate;
+}
+.eb-canvas-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+}
+.eb-canvas { display: block; }
+.eb-content {
+  position: relative;
+  border-radius: inherit;
+  z-index: 1;
+}
+.eb-layers {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+.eb-glow-1, .eb-glow-2, .eb-background-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.eb-glow-1 {
+  border: 1.5px solid color-mix(in srgb, var(--electric-border-color, #00ffd1) 60%, transparent);
+  filter: blur(1px);
+}
+.eb-glow-2 {
+  border: 1.5px solid var(--electric-border-color, #00ffd1);
+  filter: blur(4px);
+}
+.eb-background-glow {
+  z-index: -1;
+  transform: scale(1.1);
+  filter: blur(32px);
+  opacity: 0.15;
+  background: linear-gradient(-30deg, var(--electric-border-color, #00ffd1), transparent);
+}
+
 @keyframes glitch {
   0%, 100% { transform: translate(0); }
   20% { transform: translate(-2px, 2px); }

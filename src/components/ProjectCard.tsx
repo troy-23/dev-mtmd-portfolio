@@ -1,4 +1,6 @@
 import { ExternalLink } from "lucide-react";
+import ElectricBorder from "./ElectricBorder";
+import { useAnimations } from "@/hooks/use-animations";
 
 interface ProjectCardProps {
   title: string;
@@ -9,12 +11,14 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, description, projectUrl, techStack, index }: ProjectCardProps) => {
-  return (
+  const { enabled } = useAnimations();
+
+  const inner = (
     <a
       href={projectUrl || "#"}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block bg-card border border-border rounded-sm p-6 card-hover-glow relative overflow-hidden"
+      className="group block bg-card border border-border rounded-sm p-6 card-hover-glow relative overflow-hidden w-full h-full"
     >
       {/* Top accent line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent group-hover:via-primary transition-all duration-500" />
@@ -48,6 +52,20 @@ const ProjectCard = ({ title, description, projectUrl, techStack, index }: Proje
       {/* Bottom corner accent */}
       <div className="absolute bottom-0 right-0 w-8 h-8 border-b border-r border-primary/0 group-hover:border-primary/30 transition-all duration-500" />
     </a>
+  );
+
+  if (!enabled) return inner;
+
+  return (
+    <ElectricBorder
+      color="hsl(174, 100%, 50%)"
+      speed={0.8}
+      chaos={0.1}
+      borderRadius={2}
+      style={{ width: "100%", height: "100%" }}
+    >
+      {inner}
+    </ElectricBorder>
   );
 };
 
