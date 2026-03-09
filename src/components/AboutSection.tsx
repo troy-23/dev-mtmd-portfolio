@@ -38,7 +38,6 @@ const AboutSection = () => {
                 Every project I build is a step deeper into the AI development landscape — from e-commerce platforms to fitness apps, I'm constantly exploring what's possible when creativity meets intelligent tooling.
               </p>
             </div>
-            </div>
           </ScrollReveal>
 
           <ScrollReveal direction="right">
