@@ -33,14 +33,24 @@ const HeroSection = () => {
           </span>
         </motion.div>
 
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="font-mono text-sm md:text-base text-muted-foreground tracking-widest uppercase mb-4"
+        >
+          Hello, I'm
+        </motion.p>
+
         <motion.h1
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-8 leading-tight"
+          className="font-mono text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight"
         >
-          <span className="text-glow-cyan text-primary">vibe</span>
-          <span className="text-foreground">coder</span>
+          <span className="text-glow-cyan text-primary">Marlone Troy</span>
+          <br />
+          <span className="text-foreground">Dominguiano</span>
           <motion.span
             animate={{ opacity: [1, 0.4, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
