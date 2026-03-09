@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ParticleField from "./ParticleField";
+import StatusBadge from "./StatusBadge";
 
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
