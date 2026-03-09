@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 import ProjectCard from "./ProjectCard";
+import ScrollReveal from "./ScrollReveal";
 
 const ProjectsSection = () => {
   const { data: projects, isLoading } = useQuery({
@@ -18,14 +19,16 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-32 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="mb-16">
-          <span className="font-mono text-xs text-primary tracking-widest uppercase">
-            // projects
-          </span>
-          <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mt-2">
-            What I've <span className="text-primary text-glow-cyan">built</span>
-          </h2>
-        </div>
+        <ScrollReveal>
+          <div className="mb-16">
+            <span className="font-mono text-xs text-primary tracking-widest uppercase">
+              // projects
+            </span>
+            <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mt-2">
+              What I've <span className="text-primary text-glow-cyan">built</span>
+            </h2>
+          </div>
+        </ScrollReveal>
 
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -36,14 +39,15 @@ const ProjectsSection = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects?.map((project, i) => (
-              <ProjectCard
-                key={project.id}
-                title={project.title}
-                description={project.description}
-                projectUrl={project.project_url}
-                techStack={project.tech_stack}
-                index={i}
-              />
+              <ScrollReveal key={project.id} delay={i * 0.1}>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  projectUrl={project.project_url}
+                  techStack={project.tech_stack}
+                  index={i}
+                />
+              </ScrollReveal>
             ))}
           </div>
         )}
