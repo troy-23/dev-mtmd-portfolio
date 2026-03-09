@@ -14,6 +14,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("profile");
+  const { enabled: animEnabled, toggle: toggleAnim } = useAnimations();
   const { theme, toggle } = useTheme();
 
   useEffect(() => {
