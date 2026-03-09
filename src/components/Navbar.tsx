@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Zap, ZapOff } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
+import { useAnimations } from "@/hooks/use-animations";
 
 const navItems = [
   { label: "Profile", href: "#profile" },
