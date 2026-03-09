@@ -9,7 +9,7 @@ import SplashCursor from "@/components/SplashCursor";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <CursorFollower />
+      <SplashCursor />
       <Navbar />
       <HeroSection />
       <ProjectsSection />
