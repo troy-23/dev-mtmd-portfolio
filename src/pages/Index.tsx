@@ -3,8 +3,11 @@ import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import StacksSection from "@/components/StacksSection";
 import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import SplashCursor from "@/components/SplashCursor";
+import ScrollProgress from "@/components/ScrollProgress";
+import BackToTop from "@/components/BackToTop";
 import { AnimationsProvider } from "@/hooks/use-animations";
 import { useAnimations } from "@/hooks/use-animations";
 
@@ -13,12 +16,15 @@ const PortfolioContent = () => {
   return (
     <div className="min-h-screen bg-background">
       {enabled && <SplashCursor />}
+      <ScrollProgress />
       <Navbar />
       <HeroSection />
       <ProjectsSection />
       <StacksSection />
       <AboutSection />
+      <ContactSection />
       <Footer />
+      <BackToTop />
     </div>
   );
 };

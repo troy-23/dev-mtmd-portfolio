@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ParticleField from "./ParticleField";
+import StatusBadge from "./StatusBadge";
 
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
@@ -63,8 +64,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="flex gap-4 justify-center"
+          className="flex flex-col items-center gap-6"
         >
+          <div className="flex gap-4 justify-center">
           <motion.a
             href="#projects"
             onClick={(e) => { e.preventDefault(); document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" }); }}
@@ -83,6 +85,8 @@ const HeroSection = () => {
           >
             My Stacks
           </motion.a>
+          </div>
+          <StatusBadge />
         </motion.div>
       </div>
 

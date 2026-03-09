@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useCallback, ReactNode } from "react";
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from "react";
 
 interface AnimationsContextValue {
   enabled: boolean;
@@ -10,10 +10,27 @@ const AnimationsContext = createContext<AnimationsContextValue | undefined>(unde
 export function AnimationsProvider({ children }: { children: ReactNode }) {
   const [enabled, setEnabled] = useState(() => {
     if (typeof window !== "undefined") {
-      return localStorage.getItem("animations") !== "off";
+      // Auto-disable if user prefers reduced motion AND hasn't explicitly toggled
+      const stored = localStorage.getItem("animations");
+      if (stored !== null) return stored !== "off";
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      return !prefersReduced;
     }
     return true;
   });
+
+  // Listen for system preference changes
+  useEffect(() => {
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handler = (e: MediaQueryListEvent) => {
+      // Only auto-apply if user hasn't manually set a preference
+      if (localStorage.getItem("animations") === null) {
+        setEnabled(!e.matches);
+      }
+    };
+    mq.addEventListener("change", handler);
+    return () => mq.removeEventListener("change", handler);
+  }, []);
 
   const toggle = useCallback(() => {
     setEnabled((prev) => {
