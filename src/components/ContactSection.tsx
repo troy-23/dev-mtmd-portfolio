@@ -60,7 +60,7 @@ const ContactSection = () => {
         <ScrollReveal delay={0.4}>
           <div className="mt-16 text-center">
             <motion.a
-              href="mailto:hello@vibecoder.dev"
+              href="mailto:marlonetroy00@gmail.com"
               className="inline-flex items-center gap-3 px-10 py-4 bg-primary text-primary-foreground font-mono font-bold text-sm tracking-wider uppercase transition-all duration-300"
               whileHover={{ scale: 1.03, boxShadow: "0 0 40px hsl(174 100% 50% / 0.3)" }}
               whileTap={{ scale: 0.97 }}
