@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X, Sun, Moon, Zap, ZapOff } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
+import { useAnimations } from "@/hooks/use-animations";
 
 const navItems = [
   { label: "Profile", href: "#profile" },
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("profile");
+  const { enabled: animEnabled, toggle: toggleAnim } = useAnimations();
   const { theme, toggle } = useTheme();
 
   useEffect(() => {
@@ -84,10 +86,32 @@ const Navbar = () => {
             </motion.button>
           ))}
 
+          {/* Animations toggle */}
+          <motion.button
+            onClick={toggleAnim}
+            className={`ml-1 p-2 transition-colors ${animEnabled ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Toggle animations"
+            title={animEnabled ? "Animations ON" : "Animations OFF"}
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              <motion.div
+                key={animEnabled ? "on" : "off"}
+                initial={{ scale: 0.5, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.5, opacity: 0 }}
+                transition={{ duration: 0.15 }}
+              >
+                {animEnabled ? <Zap className="w-4 h-4" /> : <ZapOff className="w-4 h-4" />}
+              </motion.div>
+            </AnimatePresence>
+          </motion.button>
+
           {/* Theme toggle */}
           <motion.button
             onClick={toggle}
-            className="ml-2 p-2 text-muted-foreground hover:text-primary transition-colors"
+            className="ml-1 p-2 text-muted-foreground hover:text-primary transition-colors"
             whileHover={{ scale: 1.1, rotate: 15 }}
             whileTap={{ scale: 0.9 }}
             aria-label="Toggle theme"
@@ -106,7 +130,14 @@ const Navbar = () => {
           </motion.button>
         </div>
 
-        <div className="flex md:hidden items-center gap-2">
+        <div className="flex md:hidden items-center gap-1">
+          <motion.button
+            onClick={toggleAnim}
+            className={`p-2 transition-colors ${animEnabled ? "text-primary" : "text-muted-foreground"}`}
+            whileTap={{ scale: 0.9 }}
+          >
+            {animEnabled ? <Zap className="w-4 h-4" /> : <ZapOff className="w-4 h-4" />}
+          </motion.button>
           <motion.button
             onClick={toggle}
             className="p-2 text-muted-foreground hover:text-primary transition-colors"
