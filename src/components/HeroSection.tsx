@@ -18,7 +18,8 @@ const HeroSection = () => {
 
   return (
     <section id="profile" className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden">
-      <div className="absolute inset-0 scanline" />
+      <ParticleField />
+      <div className="absolute inset-0 scanline" style={{ zIndex: 2 }} />
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
