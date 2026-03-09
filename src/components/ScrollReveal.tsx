@@ -26,7 +26,7 @@ const ScrollReveal = ({ children, delay = 0, direction = "up", className = "" }:
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, amount: 0.1 }}
       transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
       variants={variants}
       className={className}
