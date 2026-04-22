@@ -4,11 +4,12 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
   const skills = [
     { label: "focus", value: "Prompt Engineering" },
+    { label: "web", value: "HTML / CSS / JS basics" },
     { label: "frontend", value: "React / TypeScript" },
     { label: "styling", value: "Tailwind CSS" },
-    { label: "backend", value: "Supabase / Node" },
-    { label: "tools", value: "Lovable / Cursor", isSecondary: true },
-    { label: "mindset", value: "AI-first ✓", isGreen: true },
+    { label: "ai tools", value: "Claude · Cursor · Grok · Copilot", isSecondary: true },
+    { label: "builders", value: "Lovable · Gemini · ChatGPT", isSecondary: true },
+    { label: "mindset", value: "ideas → prompts ✓", isGreen: true },
   ];
 
   return (
@@ -29,13 +30,13 @@ const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed">
-                Hey, I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — an aspiring prompt engineer and AI-first developer. My journey started with curiosity about how AI can transform the way we build software, and it quickly became a passion.
+                Hey, I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — an aspiring web developer and prompt engineer. I already have the fundamentals of web development down, and I'm sharpening them every day while leaning hard into AI as my main craft.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                I specialize in crafting precise prompts and leveraging AI tools like Lovable and Cursor to turn ideas into fully functional web applications — faster and smarter. I believe the future of development is collaborative: humans guiding AI to create remarkable things.
+                I work fluently with the latest AI tools — <span className="text-foreground">Claude, Cursor, Grok, GitHub Copilot, Gemini, ChatGPT</span>, and builders like <span className="text-foreground">Lovable</span>. My specialty is turning raw ideas into precise prompts that ship real, working products.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Every project I build is a step deeper into the AI development landscape — from e-commerce platforms to fitness apps, I'm constantly exploring what's possible when creativity meets intelligent tooling.
+                From e-commerce to fitness platforms, every project is a step deeper into AI-first development — where the edge isn't just writing code, it's knowing exactly what to ask, and how.
               </p>
             </div>
           </ScrollReveal>
