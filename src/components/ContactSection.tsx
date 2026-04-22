@@ -1,11 +1,10 @@
-import { Github, Facebook, Mail, Linkedin, ArrowUpRight } from "lucide-react";
+import { Github, Facebook, Mail, ArrowUpRight } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
 
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/troy-23", handle: "@troy-23" },
   { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/yertmontalla", handle: "yertmontalla" },
-  { icon: Linkedin, label: "LinkedIn", href: "#", handle: "troy" },
   { icon: Mail, label: "Email", href: "mailto:marlonetroy00@gmail.com", handle: "marlonetroy00@gmail.com" },
 ];
 

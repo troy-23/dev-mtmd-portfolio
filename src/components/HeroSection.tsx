@@ -5,7 +5,7 @@ import StatusBadge from "./StatusBadge";
 
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
-  const fullText = "Aspiring Prompt Engineer & AI-First Developer.";
+  const fullText = "Aspiring Web Developer & Prompt Engineer.";
 
   useEffect(() => {
     let i = 0;

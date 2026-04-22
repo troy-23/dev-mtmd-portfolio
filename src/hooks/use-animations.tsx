@@ -10,13 +10,10 @@ const AnimationsContext = createContext<AnimationsContextValue | undefined>(unde
 export function AnimationsProvider({ children }: { children: ReactNode }) {
   const [enabled, setEnabled] = useState(() => {
     if (typeof window !== "undefined") {
-      // Auto-disable if user prefers reduced motion AND hasn't explicitly toggled
       const stored = localStorage.getItem("animations");
-      if (stored !== null) return stored !== "off";
-      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      return !prefersReduced;
+      if (stored !== null) return stored === "on";
     }
-    return true;
+    return false;
   });
 
   // Listen for system preference changes

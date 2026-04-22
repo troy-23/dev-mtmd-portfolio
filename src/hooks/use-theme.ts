@@ -1,25 +1,17 @@
-import { useState, useEffect, useCallback } from "react";
+import { useEffect, useCallback } from "react";
 
-type Theme = "dark" | "light";
-
+// Dark mode only — theme is locked
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof window !== "undefined") {
-      return (localStorage.getItem("theme") as Theme) || "dark";
-    }
-    return "dark";
-  });
-
   useEffect(() => {
     const root = document.documentElement;
-    root.classList.remove("light", "dark");
-    root.classList.add(theme);
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggle = useCallback(() => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
+    root.classList.remove("light");
+    root.classList.add("dark");
+    localStorage.setItem("theme", "dark");
   }, []);
 
-  return { theme, toggle };
+  const toggle = useCallback(() => {
+    // no-op: dark mode is enforced
+  }, []);
+
+  return { theme: "dark" as const, toggle };
 }
