@@ -107,26 +107,6 @@ const Navbar = () => {
             </AnimatePresence>
           </motion.button>
 
-          {/* Theme toggle */}
-          <motion.button
-            onClick={toggle}
-            className="ml-1 p-2 text-muted-foreground hover:text-primary transition-colors"
-            whileHover={{ scale: 1.1, rotate: 15 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Toggle theme"
-          >
-            <AnimatePresence mode="wait" initial={false}>
-              <motion.div
-                key={theme}
-                initial={{ y: -10, opacity: 0, rotate: -90 }}
-                animate={{ y: 0, opacity: 1, rotate: 0 }}
-                exit={{ y: 10, opacity: 0, rotate: 90 }}
-                transition={{ duration: 0.2 }}
-              >
-                {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-              </motion.div>
-            </AnimatePresence>
-          </motion.button>
         </div>
 
         <div className="flex md:hidden items-center gap-1">
