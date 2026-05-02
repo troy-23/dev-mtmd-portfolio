@@ -2,12 +2,12 @@ import { Github, Facebook, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="py-16 px-6 border-t border-border">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+    <footer className="py-12 px-6 border-t border-border">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="font-mono text-sm text-muted-foreground">
-          <span className="text-primary">vibecoder</span>
+          <span className="text-primary">MTD</span>
           <span className="text-secondary">_</span>
-          <span className="ml-4">© {new Date().getFullYear()}</span>
+          <span className="ml-4 text-xs">© {new Date().getFullYear()} Marlone Troy Dominguiano</span>
         </div>
 
         <div className="flex gap-6">
@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         <div className="font-mono text-xs text-muted-foreground">
-          built with <span className="text-secondary">♥</span> and vibes
+          built with <span className="text-primary">precision</span> & <span className="text-secondary">AI</span>
         </div>
       </div>
     </footer>

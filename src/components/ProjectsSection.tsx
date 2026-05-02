@@ -17,23 +17,28 @@ const ProjectsSection = () => {
   });
 
   return (
-    <section id="projects" className="py-32 px-6">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="py-32 px-6 border-t border-border relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.01] via-transparent to-transparent pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto relative z-10">
         <ScrollReveal>
-          <div className="mb-16">
+          <div className="mb-16 text-center">
             <span className="font-mono text-xs text-primary tracking-widest uppercase">
-              // projects
+              // featured work
             </span>
-            <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mt-2">
-              What I've <span className="text-primary text-glow-cyan">built</span>
+            <h2 className="font-mono text-3xl md:text-5xl font-bold text-foreground mt-3">
+              What I've <span className="text-primary text-glow-cyan">shipped</span>
             </h2>
+            <p className="text-muted-foreground mt-4 max-w-lg mx-auto text-sm">
+              Real products built with AI-first workflows — from concept to deployment.
+            </p>
           </div>
         </ScrollReveal>
 
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="bg-card border border-border rounded-sm p-6 h-48 animate-pulse" />
+            {[...Array(3)].map((_, i) => (
+              <div key={i} className="bg-card border border-border rounded-sm p-6 h-56 animate-pulse" />
             ))}
           </div>
         ) : (

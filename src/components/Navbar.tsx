@@ -7,6 +7,7 @@ const navItems = [
   { label: "Profile", href: "#profile" },
   { label: "Projects", href: "#projects" },
   { label: "Stacks", href: "#stacks" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -19,7 +20,7 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
-      const sections = ["profile", "projects", "stacks", "contact"];
+      const sections = ["profile", "projects", "stacks", "about", "contact"];
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top <= 120) {
@@ -56,8 +57,8 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="text-primary text-glow-cyan group-hover:animate-glitch">v</span>
-          <span className="text-foreground">c</span>
+          <span className="text-primary text-glow-cyan group-hover:animate-glitch">MT</span>
+          <span className="text-foreground">D</span>
           <span className="text-secondary text-glow-pink">_</span>
         </motion.a>
 
@@ -85,7 +86,6 @@ const Navbar = () => {
             </motion.button>
           ))}
 
-          {/* Animations toggle */}
           <motion.button
             onClick={toggleAnim}
             className={`ml-1 p-2 transition-colors ${animEnabled ? "text-primary" : "text-muted-foreground hover:text-foreground"}`}
@@ -106,7 +106,6 @@ const Navbar = () => {
               </motion.div>
             </AnimatePresence>
           </motion.button>
-
         </div>
 
         <div className="flex md:hidden items-center gap-1">
