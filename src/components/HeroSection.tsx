@@ -5,7 +5,7 @@ import StatusBadge from "./StatusBadge";
 
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
-  const fullText = "I turn ideas into prompts — and prompts into products.";
+  const fullText = "I turn ideas into systems — and systems into shipped products.";
 
   useEffect(() => {
     let i = 0;
@@ -22,7 +22,6 @@ const HeroSection = () => {
       <ParticleField />
       <div className="absolute inset-0 scanline" style={{ zIndex: 2 }} />
 
-      {/* Ambient glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-secondary/[0.04] blur-[100px] pointer-events-none" />
 
@@ -70,11 +69,11 @@ const HeroSection = () => {
           className="flex flex-wrap items-center justify-center gap-3 mb-8"
         >
           <span className="px-4 py-1.5 border border-primary/40 rounded-full font-mono text-xs tracking-wider text-primary uppercase">
-            Full Stack Web Developer
+            Full Stack AI Web Engineer
           </span>
           <span className="text-muted-foreground/40 font-mono text-xs">×</span>
           <span className="px-4 py-1.5 border border-secondary/40 rounded-full font-mono text-xs tracking-wider text-secondary uppercase">
-            Prompt Engineer
+            AI Systems Builder
           </span>
         </motion.div>
 
@@ -124,7 +123,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
 
-      {/* Decorative lines */}
       <motion.div
         animate={{ height: [100, 180, 100] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -138,7 +136,6 @@ const HeroSection = () => {
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-primary/30 rounded-full animate-pulse" />
       <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-secondary/30 rounded-full animate-pulse delay-1000" />
 
-      {/* Scroll indicator */}
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}

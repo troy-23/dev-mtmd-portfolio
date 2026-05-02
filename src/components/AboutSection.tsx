@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const skills = [
-    { label: "role", value: "Full Stack Web Developer", highlight: "primary" },
-    { label: "specialty", value: "Prompt Engineering & AI", highlight: "secondary" },
-    { label: "frontend", value: "React · TypeScript · Tailwind", highlight: "default" },
-    { label: "backend", value: "Supabase · Edge Functions", highlight: "default" },
-    { label: "ai arsenal", value: "Claude · Cursor · Grok · Copilot", highlight: "secondary" },
-    { label: "builders", value: "Lovable · Gemini · ChatGPT", highlight: "secondary" },
-    { label: "superpower", value: "ideas → prompts → products ✓", highlight: "green" },
+    { label: "role", value: "Full Stack AI Web Engineer", highlight: "primary" },
+    { label: "specialty", value: "AI Systems · RAG · Production LLM Apps", highlight: "secondary" },
+    { label: "frontend", value: "React · TypeScript · Tailwind · Next.js · shadcn/ui", highlight: "default" },
+    { label: "backend", value: "Supabase · PostgreSQL · Edge Functions · tRPC", highlight: "default" },
+    { label: "ai stack", value: "OpenAI · Claude · Gemini · LangChain · LlamaIndex · Pinecone", highlight: "secondary" },
+    { label: "builders", value: "Cursor · Copilot · Windsurf · Continue.dev · Supermaven · Codeium", highlight: "secondary" },
+    { label: "infra", value: "Vercel · Cloudflare · Docker", highlight: "default" },
+    { label: "superpower", value: "ideas → systems → shipped products ✓", highlight: "green" },
   ];
 
   const highlightColor = {
@@ -30,7 +31,7 @@ const AboutSection = () => {
               // about me
             </span>
             <h2 className="font-mono text-3xl md:text-5xl font-bold text-foreground mt-3">
-              The <span className="text-secondary text-glow-pink">developer</span> behind the prompts
+              The <span className="text-secondary text-glow-pink">engineer</span> behind the systems
             </h2>
           </div>
         </ScrollReveal>
@@ -39,13 +40,13 @@ const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-base">
-                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — a full stack web developer who happens to be exceptionally good at prompting. I don't just use AI tools — I master them to ship real products, fast.
+                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — a full stack AI web engineer who builds production-grade systems, not just prototypes. I architect end-to-end solutions from retrieval pipelines to deployed applications.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
-                With a solid foundation in <span className="text-foreground">HTML, CSS, JavaScript, React, and TypeScript</span>, I combine traditional development skills with cutting-edge AI workflows. My toolkit includes <span className="text-primary">Claude, Cursor, Grok, GitHub Copilot, Gemini,</span> and <span className="text-primary">ChatGPT</span>.
+                With deep experience in <span className="text-foreground">React, TypeScript, Next.js, and PostgreSQL</span>, I pair traditional engineering with AI-native workflows. I build with <span className="text-primary">LangChain, LlamaIndex, Pinecone</span> for RAG systems, and leverage <span className="text-primary">Claude, Gemini, and OpenAI</span> for production LLM applications with streaming responses, tool calling, and agent orchestration.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
-                From e-commerce platforms to fitness apps, every project I build is proof that the future of development isn't about choosing between code and AI — it's about mastering both.
+                Every project I ship proves that modern development is about building intelligent systems — RAG pipelines, vector search, real-time AI features — not just wiring up APIs. I deploy on <span className="text-foreground">Vercel, Cloudflare Workers, and Docker</span> because production means infrastructure, not just code.
               </p>
 
               <motion.div
@@ -59,7 +60,7 @@ const AboutSection = () => {
                   onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
                   className="inline-flex items-center gap-2 px-6 py-3 border border-primary/30 text-primary font-mono text-xs tracking-wider uppercase hover:bg-primary/10 transition-all"
                 >
-                  Let's work together →
+                  Let's build together →
                 </a>
               </motion.div>
             </div>
@@ -68,7 +69,7 @@ const AboutSection = () => {
           <ScrollReveal direction="right">
             <div className="space-y-1 bg-card border border-border rounded-sm p-6">
               <div className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase mb-4">
-                // skill_matrix
+                // system_matrix
               </div>
               {skills.map((skill, i) => (
                 <motion.div
@@ -80,7 +81,7 @@ const AboutSection = () => {
                   className={`flex justify-between items-center py-3 ${i < skills.length - 1 ? "border-b border-border/50" : ""}`}
                 >
                   <span className="text-muted-foreground font-mono text-xs uppercase tracking-wider">{skill.label}</span>
-                  <span className={`font-mono text-sm ${highlightColor[skill.highlight as keyof typeof highlightColor]}`}>
+                  <span className={`font-mono text-xs sm:text-sm text-right ${highlightColor[skill.highlight as keyof typeof highlightColor]}`}>
                     {skill.value}
                   </span>
                 </motion.div>

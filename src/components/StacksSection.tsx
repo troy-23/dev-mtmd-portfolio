@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Sparkles, Cpu, Workflow } from "lucide-react";
+import { Instagram, Brain, Server, Globe, Wrench, Cloud } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 type Tier = {
@@ -8,53 +8,54 @@ type Tier = {
   title: string;
   blurb: string;
   color: "primary" | "secondary" | "neon-green";
-  icon: typeof Sparkles;
+  icon: typeof Brain;
   items: { name: string; note: string }[];
 };
 
 const tiers: Tier[] = [
   {
-    key: "mastered",
+    key: "ai-systems",
     label: "tier_01",
-    title: "Mastered Stack",
-    blurb: "Production-ready tools I use daily for cinematic AI output.",
+    title: "AI & LLM Systems",
+    blurb: "Production AI — RAG pipelines, streaming, tool calling, and agent orchestration.",
     color: "primary",
-    icon: Sparkles,
+    icon: Brain,
     items: [
-      { name: "Google Veo 3.1", note: "High-fidelity technical & maritime visualizations." },
-      { name: "CapCut AI", note: "Editing, captions, and AI-assisted post-production." },
-      { name: "Topaz Video AI", note: "4K upscaling and frame interpolation." },
-      { name: "ElevenLabs", note: "High-authority corporate voice synthesis." },
-      { name: "Pika.art", note: "Fast iterative motion concepts." },
-      { name: "Gemini", note: "Multimodal reasoning & creative direction." },
+      { name: "OpenAI / Claude / Gemini", note: "Multi-model orchestration for production LLM apps." },
+      { name: "LangChain & LlamaIndex", note: "RAG frameworks — retrieval, chunking, and source attribution." },
+      { name: "Pinecone / Weaviate / Chroma", note: "Vector search and semantic retrieval at scale." },
+      { name: "Streaming & Tool Calling", note: "Real-time responses with function-calling agents." },
+      { name: "ElevenLabs", note: "Voice synthesis for AI-powered audio pipelines." },
     ],
   },
   {
-    key: "active",
+    key: "fullstack",
     label: "tier_02",
-    title: "Active Specializations",
-    blurb: "In-progress workflows I'm refining for production-grade narratives.",
+    title: "Full Stack Engineering",
+    blurb: "End-to-end web development with modern frameworks and type-safe backends.",
     color: "secondary",
-    icon: Cpu,
+    icon: Server,
     items: [
-      { name: "Higgsfield", note: "High-motion cinematic sequence pipelines." },
-      { name: "HeyGen", note: "AI-avatar integration for technical maritime decks." },
-      { name: "NotebookLM", note: "Grounding scripts in decarbonization & smart-port docs." },
-      { name: "LTX Studio", note: "Scene foundation & multi-shot character consistency." },
+      { name: "React · TypeScript · Next.js", note: "Production frontend with SSR, ISR, and app router." },
+      { name: "Tailwind · shadcn/ui · Framer Motion", note: "Design systems with interaction quality." },
+      { name: "Supabase · PostgreSQL", note: "Auth, realtime, edge functions, and raw SQL." },
+      { name: "tRPC · Prisma", note: "End-to-end type safety from DB to client." },
+      { name: "TanStack Query", note: "Server state management with caching and optimistic updates." },
     ],
   },
   {
-    key: "web",
+    key: "infra",
     label: "tier_03",
-    title: "AI-Integrated Web",
-    blurb: "Shipping AI features inside real web products.",
+    title: "Infra & Dev Tools",
+    blurb: "Deployment, edge compute, and the AI-native development toolkit.",
     color: "neon-green",
-    icon: Workflow,
+    icon: Cloud,
     items: [
-      { name: "Lovable + Supabase", note: "Full-stack AI apps with auth, DB, and edge functions." },
-      { name: "Lovable AI Gateway", note: "LLM calls without managing keys." },
-      { name: "RAG Foundations", note: "Chunking, retrieval, and source attribution patterns." },
-      { name: "Prompt-driven UX", note: "Embedding generative flows directly in product UI." },
+      { name: "Vercel", note: "Production deployments with edge middleware and analytics." },
+      { name: "Cloudflare Workers", note: "Edge compute, KV storage, and global distribution." },
+      { name: "Docker", note: "Containerized deployments and reproducible environments." },
+      { name: "Cursor · Copilot · Windsurf", note: "AI-native IDEs for 10x development velocity." },
+      { name: "Continue.dev · Supermaven · Codeium", note: "Code intelligence and AI pair programming." },
     ],
   },
 ];
@@ -93,17 +94,16 @@ const StacksSection = () => {
               // technical stack
             </span>
             <h2 className="font-mono text-3xl md:text-4xl font-bold text-foreground mt-2">
-              Stack for <span className="text-primary text-glow-cyan">Prompt Engineering</span> &{" "}
-              <span className="text-secondary text-glow-pink">Generative Workflows</span>
+              Stack for <span className="text-primary text-glow-cyan">AI Engineering</span> &{" "}
+              <span className="text-secondary text-glow-pink">Production Systems</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
-              A tiered view of the tools I've mastered, the workflows I'm actively specializing in, and the
-              methodology behind every shipped narrative.
+              Not just tools — systems built with them. From RAG pipelines and vector search to 
+              deployed full-stack applications on edge infrastructure.
             </p>
           </div>
         </ScrollReveal>
 
-        {/* Tiered grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tiers.map((tier, ti) => {
             const c = colorMap[tier.color];
@@ -146,7 +146,7 @@ const StacksSection = () => {
           })}
         </div>
 
-        {/* MTMD Methodology card */}
+        {/* Architecture Philosophy card */}
         <ScrollReveal delay={0.2}>
           <div className="mt-8 relative bg-card border border-primary/30 rounded-sm p-8 overflow-hidden card-hover-glow">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none" />
@@ -156,19 +156,18 @@ const StacksSection = () => {
                   // methodology
                 </span>
                 <h3 className="font-mono text-xl font-bold text-foreground mt-2">
-                  The <span className="text-primary text-glow-cyan">MTMD</span> Framework
+                  How I <span className="text-primary text-glow-cyan">Ship</span>
                 </h3>
                 <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
-                  Model · Task · Methodology · Deployment — my repeatable system for turning a brief into a
-                  production-ready generative output.
+                  Every system follows a clear pipeline: architecture → implementation → deployment → iteration. No prototypes without production plans.
                 </p>
               </div>
               <div className="md:col-span-2 grid sm:grid-cols-2 gap-4">
                 {[
-                  { k: "Model", v: "Pick the right engine for the job — Veo, Gemini, ElevenLabs, etc." },
-                  { k: "Task", v: "Define narrative goals, constraints, and evaluation criteria up front." },
-                  { k: "Methodology", v: "Scene Foundation first — generate world & lighting before subjects for 100% environmental consistency across a 1-minute story." },
-                  { k: "Deployment", v: "Upscale, post-process, and ship inside web or social pipelines." },
+                  { k: "Architecture", v: "Design data flow, pick the right models, define retrieval strategy and evaluation criteria." },
+                  { k: "Implementation", v: "Type-safe full stack — React + Next.js frontend, PostgreSQL + edge functions backend, LLM orchestration layer." },
+                  { k: "Deployment", v: "Vercel for web, Cloudflare for edge, Docker for services. CI/CD with zero-downtime deploys." },
+                  { k: "Iteration", v: "Monitor, measure, improve. Analytics, error tracking, and user feedback loops built in from day one." },
                 ].map((step) => (
                   <div key={step.k} className="border border-border rounded-sm p-4 bg-background/40">
                     <div className="font-mono text-xs text-primary mb-1">{step.k}</div>
@@ -180,7 +179,7 @@ const StacksSection = () => {
           </div>
         </ScrollReveal>
 
-        {/* Yorty / Gemini real-world use */}
+        {/* Generative media highlight */}
         <ScrollReveal delay={0.3}>
           <a
             href="https://www.instagram.com/yortycollects/"
@@ -194,15 +193,13 @@ const StacksSection = () => {
               </div>
               <div>
                 <div className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
-                  // real-world use
+                  // generative media
                 </div>
                 <h4 className="font-mono text-base font-bold text-foreground mt-1">
-                  Gemini in my <span className="text-secondary text-glow-pink">toy business</span>
+                  AI-generated content for <span className="text-secondary text-glow-pink">@yortycollects</span>
                 </h4>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed max-w-xl">
-                  I use Gemini to generate product animations and short-form content for{" "}
-                  <span className="text-foreground">@yortycollects</span> — turning static collectibles into
-                  scroll-stopping motion.
+                  Production AI media — Veo 3.1 visualizations, ElevenLabs voice synthesis, and Gemini-powered product animations deployed for a real business.
                 </p>
               </div>
             </div>
