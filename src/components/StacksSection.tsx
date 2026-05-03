@@ -149,7 +149,7 @@ const StacksSection = () => {
                   // methodology
                 </span>
                 <h3 className="font-mono text-xl font-bold text-foreground mt-2">
-                  How I <span className="text-primary text-glow-cyan">Ship</span>
+                  How I <span className="text-primary text-glow-cyan">Develop</span>
                 </h3>
                 <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
                   Every system follows a clear pipeline: architecture → implementation → deployment → iteration. No prototypes without production plans.
