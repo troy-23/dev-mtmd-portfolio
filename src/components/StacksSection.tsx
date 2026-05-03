@@ -92,8 +92,7 @@ const StacksSection = () => {
               <span className="text-secondary text-glow-pink">Production Systems</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
-              Not just tools — systems built with them. From RAG pipelines and vector search to 
-              deployed full-stack applications on edge infrastructure.
+              The tools and systems I use daily — always updated on the latest AI tools and workflows.
             </p>
           </div>
         </ScrollReveal>
