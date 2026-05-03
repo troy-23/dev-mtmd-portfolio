@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const skills = [
-    { label: "role", value: "Full Stack AI Web Engineer", highlight: "primary" },
-    { label: "specialty", value: "AI Systems · RAG · Production LLM Apps", highlight: "secondary" },
+    { label: "role", value: "Full Stack Web Developer (AI-Assisted)", highlight: "primary" },
+    { label: "specialty", value: "Aspiring Prompt Engineer · Updated on Latest AI Tools", highlight: "secondary" },
     { label: "frontend", value: "React · TypeScript · Tailwind · Next.js · shadcn/ui", highlight: "default" },
-    { label: "backend", value: "Supabase · PostgreSQL · Edge Functions · tRPC", highlight: "default" },
-    { label: "ai stack", value: "OpenAI · Claude · Gemini · LangChain · LlamaIndex · Pinecone", highlight: "secondary" },
-    { label: "builders", value: "Cursor · Copilot · Windsurf · Continue.dev · Supermaven · Codeium", highlight: "secondary" },
+    { label: "backend", value: "Supabase · PostgreSQL · Edge Functions", highlight: "default" },
+    { label: "ai stack", value: "OpenAI · Claude · Gemini", highlight: "secondary" },
+    { label: "builders", value: "Cursor · Copilot · Windsurf · Codex", highlight: "secondary" },
     { label: "infra", value: "Vercel · Cloudflare · Docker", highlight: "default" },
     { label: "superpower", value: "ideas → systems → shipped products ✓", highlight: "green" },
   ];
