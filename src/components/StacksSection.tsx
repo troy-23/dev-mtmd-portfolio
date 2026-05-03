@@ -33,9 +33,11 @@ const tiers: Tier[] = [
     color: "secondary",
     icon: Server,
     items: [
-      { name: "React · TypeScript · Next.js", note: "Production frontend with SSR, ISR, and app router." },
-      { name: "Tailwind · shadcn/ui · Framer Motion", note: "Design systems with interaction quality." },
+      { name: "React 19 · TypeScript · Next.js", note: "Production frontend with SSR, ISR, and app router." },
+      { name: "Tailwind CSS v4 · shadcn/ui · Framer Motion", note: "Design systems with interaction quality." },
+      { name: "GSAP · ScrollTrigger", note: "Advanced scroll-driven animations and transitions." },
       { name: "Supabase · PostgreSQL", note: "Auth, realtime, edge functions, and raw SQL." },
+      { name: "Vite 6", note: "Lightning-fast dev server and optimized production builds." },
     ],
   },
   {
