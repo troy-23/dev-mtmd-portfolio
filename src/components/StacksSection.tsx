@@ -16,31 +16,26 @@ const tiers: Tier[] = [
   {
     key: "ai-systems",
     label: "tier_01",
-    title: "AI & LLM Systems",
-    blurb: "Production AI — RAG pipelines, streaming, tool calling, and agent orchestration.",
+    title: "AI & LLM Tools",
+    blurb: "The AI models and tools I use for prompt engineering and generative workflows.",
     color: "primary",
     icon: Brain,
     items: [
-      { name: "OpenAI / Claude / Gemini", note: "Multi-model orchestration for production LLM apps." },
-      { name: "LangChain & LlamaIndex", note: "RAG frameworks — retrieval, chunking, and source attribution." },
-      { name: "Pinecone / Weaviate / Chroma", note: "Vector search and semantic retrieval at scale." },
-      { name: "Streaming & Tool Calling", note: "Real-time responses with function-calling agents." },
+      { name: "OpenAI / Claude / Gemini", note: "Multi-model prompting for diverse AI tasks." },
       { name: "ElevenLabs", note: "Voice synthesis for AI-powered audio pipelines." },
     ],
   },
   {
     key: "fullstack",
     label: "tier_02",
-    title: "Full Stack Engineering",
-    blurb: "End-to-end web development with modern frameworks and type-safe backends.",
+    title: "Full Stack Web Dev (AI-Assisted)",
+    blurb: "Modern web development powered by AI tools — landing pages shipped in 24 hours.",
     color: "secondary",
     icon: Server,
     items: [
       { name: "React · TypeScript · Next.js", note: "Production frontend with SSR, ISR, and app router." },
       { name: "Tailwind · shadcn/ui · Framer Motion", note: "Design systems with interaction quality." },
       { name: "Supabase · PostgreSQL", note: "Auth, realtime, edge functions, and raw SQL." },
-      { name: "tRPC · Prisma", note: "End-to-end type safety from DB to client." },
-      { name: "TanStack Query", note: "Server state management with caching and optimistic updates." },
     ],
   },
   {
@@ -54,8 +49,7 @@ const tiers: Tier[] = [
       { name: "Vercel", note: "Production deployments with edge middleware and analytics." },
       { name: "Cloudflare Workers", note: "Edge compute, KV storage, and global distribution." },
       { name: "Docker", note: "Containerized deployments and reproducible environments." },
-      { name: "Cursor · Copilot · Windsurf", note: "AI-native IDEs for 10x development velocity." },
-      { name: "Continue.dev · Supermaven · Codeium", note: "Code intelligence and AI pair programming." },
+      { name: "Cursor · Copilot · Windsurf · Codex", note: "AI-native IDEs for rapid development." },
     ],
   },
 ];
@@ -98,8 +92,7 @@ const StacksSection = () => {
               <span className="text-secondary text-glow-pink">Production Systems</span>
             </h2>
             <p className="text-muted-foreground mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
-              Not just tools — systems built with them. From RAG pipelines and vector search to 
-              deployed full-stack applications on edge infrastructure.
+              The tools and systems I use daily — always updated on the latest AI tools and workflows.
             </p>
           </div>
         </ScrollReveal>
@@ -156,7 +149,7 @@ const StacksSection = () => {
                   // methodology
                 </span>
                 <h3 className="font-mono text-xl font-bold text-foreground mt-2">
-                  How I <span className="text-primary text-glow-cyan">Ship</span>
+                  How I <span className="text-primary text-glow-cyan">Develop</span>
                 </h3>
                 <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
                   Every system follows a clear pipeline: architecture → implementation → deployment → iteration. No prototypes without production plans.

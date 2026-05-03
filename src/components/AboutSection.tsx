@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const skills = [
-    { label: "role", value: "Full Stack AI Web Engineer", highlight: "primary" },
-    { label: "specialty", value: "AI Systems · RAG · Production LLM Apps", highlight: "secondary" },
+    { label: "role", value: "Full Stack Web Developer (AI-Assisted)", highlight: "primary" },
+    { label: "specialty", value: "Aspiring Prompt Engineer · Updated on Latest AI Tools", highlight: "secondary" },
     { label: "frontend", value: "React · TypeScript · Tailwind · Next.js · shadcn/ui", highlight: "default" },
-    { label: "backend", value: "Supabase · PostgreSQL · Edge Functions · tRPC", highlight: "default" },
-    { label: "ai stack", value: "OpenAI · Claude · Gemini · LangChain · LlamaIndex · Pinecone", highlight: "secondary" },
-    { label: "builders", value: "Cursor · Copilot · Windsurf · Continue.dev · Supermaven · Codeium", highlight: "secondary" },
+    { label: "backend", value: "Supabase · PostgreSQL · Edge Functions", highlight: "default" },
+    { label: "ai stack", value: "OpenAI · Claude · Gemini", highlight: "secondary" },
+    { label: "builders", value: "Cursor · Copilot · Windsurf · Codex", highlight: "secondary" },
     { label: "infra", value: "Vercel · Cloudflare · Docker", highlight: "default" },
     { label: "superpower", value: "ideas → systems → shipped products ✓", highlight: "green" },
   ];
@@ -40,13 +40,13 @@ const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-base">
-                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — a full stack AI web engineer who builds production-grade systems, not just prototypes. I architect end-to-end solutions from retrieval pipelines to deployed applications.
+                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — an aspiring prompt engineer and full stack web developer who can confidently create a website landing page in 24 hours. I'm always updated on the latest AI tools and workflows.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
-                With deep experience in <span className="text-foreground">React, TypeScript, Next.js, and PostgreSQL</span>, I pair traditional engineering with AI-native workflows. I build with <span className="text-primary">LangChain, LlamaIndex, Pinecone</span> for RAG systems, and leverage <span className="text-primary">Claude, Gemini, and OpenAI</span> for production LLM applications with streaming responses, tool calling, and agent orchestration.
+                With solid experience in <span className="text-foreground">React, TypeScript, Next.js, and PostgreSQL</span>, I pair traditional web development with AI-assisted workflows using <span className="text-primary">Claude, Gemini, and OpenAI</span>. I leverage tools like <span className="text-primary">Cursor, Copilot, Windsurf, and Codex</span> to build and ship production-ready applications fast.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
-                Every project I ship proves that modern development is about building intelligent systems — RAG pipelines, vector search, real-time AI features — not just wiring up APIs. I deploy on <span className="text-foreground">Vercel, Cloudflare Workers, and Docker</span> because production means infrastructure, not just code.
+                I turn ideas into prompts — and prompts into shipped products. I deploy on <span className="text-foreground">Vercel, Cloudflare Workers, and Docker</span> because production means infrastructure, not just code.
               </p>
 
               <motion.div
