@@ -18,12 +18,12 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section id="profile" className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden">
+    <section id="profile" className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden overflow-x-hidden">
       <ParticleField />
       <div className="absolute inset-0 scanline" style={{ zIndex: 2 }} />
 
-      <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] rounded-full bg-secondary/[0.04] blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] rounded-full bg-secondary/[0.04] blur-[100px] pointer-events-none" />
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
         <motion.div

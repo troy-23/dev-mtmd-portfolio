@@ -16,7 +16,7 @@ import { useAnimations } from "@/hooks/use-animations";
 const PortfolioContent = () => {
   const { enabled } = useAnimations();
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background overflow-x-hidden">
       {enabled && <SplashCursor />}
       <ScrollProgress />
       <Navbar />
