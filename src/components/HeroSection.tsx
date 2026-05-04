@@ -2,12 +2,24 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ParticleField from "./ParticleField";
 import StatusBadge from "./StatusBadge";
+import { useLoadingState } from "@/hooks/useLoadingState";
 
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
+  const [shouldStartTyping, setShouldStartTyping] = useState(false);
   const fullText = "I turn ideas into systems — and systems into shipped products.";
+  const { isLoading } = useLoadingState();
 
   useEffect(() => {
+    // Start typing only after loading is complete
+    if (!isLoading && !shouldStartTyping) {
+      setShouldStartTyping(true);
+    }
+  }, [isLoading, shouldStartTyping]);
+
+  useEffect(() => {
+    if (!shouldStartTyping) return;
+    
     let i = 0;
     const interval = setInterval(() => {
       setDisplayed(fullText.slice(0, i + 1));
@@ -15,7 +27,7 @@ const HeroSection = () => {
       if (i >= fullText.length) clearInterval(interval);
     }, 45);
     return () => clearInterval(interval);
-  }, []);
+  }, [shouldStartTyping]);
 
   return (
     <section id="profile" className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden overflow-x-hidden">
@@ -46,8 +58,8 @@ const HeroSection = () => {
 
         <motion.h1
           initial={{ opacity: 0, scale: 0.92 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          animate={shouldStartTyping ? { opacity: 1, scale: 1 } : {}}
+          transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-[0.95] tracking-tight"
         >
           <span className="text-glow-cyan text-primary">Marlone Troy</span>

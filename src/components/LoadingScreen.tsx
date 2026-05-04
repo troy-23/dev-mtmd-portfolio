@@ -1,32 +1,8 @@
-import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useLoadingState } from "@/hooks/useLoadingState";
 
 const LoadingScreen = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadingProgress, setLoadingProgress] = useState(0);
-
-  useEffect(() => {
-    // Simulate loading progress
-    const progressInterval = setInterval(() => {
-      setLoadingProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(progressInterval);
-          return 100;
-        }
-        return prev + Math.random() * 15;
-      });
-    }, 200);
-
-    // Hide loading screen after content is loaded
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 2500);
-
-    return () => {
-      clearInterval(progressInterval);
-      clearTimeout(timer);
-    };
-  }, []);
+  const { isLoading, loadingProgress, isContentReady } = useLoadingState();
 
   return (
     <AnimatePresence>

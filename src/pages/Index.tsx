@@ -11,27 +11,32 @@ import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
 import Chatbot from "@/components/Chatbot";
 import LoadingScreen from "@/components/LoadingScreen";
+import { useLoadingState } from "@/hooks/useLoadingState";
 import { AnimationsProvider } from "@/hooks/use-animations";
 import { useAnimations } from "@/hooks/use-animations";
 
 const PortfolioContent = () => {
   const { enabled } = useAnimations();
+  const { isLoading, isContentReady } = useLoadingState();
+  
   return (
-    <div className="min-h-screen bg-background overflow-x-hidden">
+    <>
       <LoadingScreen />
-      {enabled && <SplashCursor />}
-      <ScrollProgress />
-      <Navbar />
-      <HeroSection />
-      <ProjectsSection />
-      <ServicesSection />
-      <StacksSection />
-      <AboutSection />
-      <ContactSection />
-      <Footer />
-      <BackToTop />
-      <Chatbot />
-    </div>
+      <div className={`min-h-screen bg-background overflow-x-hidden transition-opacity duration-500 ${!isContentReady ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+        {enabled && <SplashCursor />}
+        <ScrollProgress />
+        <Navbar />
+        <HeroSection />
+        <ProjectsSection />
+        <ServicesSection />
+        <StacksSection />
+        <AboutSection />
+        <ContactSection />
+        <Footer />
+        <BackToTop />
+        <Chatbot />
+      </div>
+    </>
   );
 };
 
