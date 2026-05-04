@@ -68,8 +68,8 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="mb-8"
         >
-          <div className="relative inline-block">
-            <div className="relative w-32 h-32 md:w-40 md:h-40">
+          <div className="relative inline-block overflow-hidden">
+            <div className="relative w-32 h-32 md:w-40 md:h-40 max-w-[160px] max-h-[160px] md:max-w-[160px] md:max-h-[160px]">
               {/* Image 1: ai-mtmd */}
               <motion.img
                 src="/ai-mtmd.png"
