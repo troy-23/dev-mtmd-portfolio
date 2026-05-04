@@ -6,6 +6,7 @@ import { useAnimations } from "@/hooks/use-animations";
 const navItems = [
   { label: "Profile", href: "#profile" },
   { label: "Projects", href: "#projects" },
+  { label: "Services", href: "#services" },
   { label: "Stacks", href: "#stacks" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -20,7 +21,7 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 50);
-      const sections = ["profile", "projects", "stacks", "about", "contact"];
+      const sections = ["profile", "projects", "services", "stacks", "about", "contact"];
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id);
         if (el && el.getBoundingClientRect().top <= 120) {

@@ -29,7 +29,7 @@ const ContactSection = () => {
 
         <ScrollReveal delay={0.1}>
           <p className="text-muted-foreground text-lg mb-12 max-w-xl">
-            Got a project idea, collaboration, or just want to talk tech? I'm always open to new opportunities and conversations.
+            Ready to bring your project to life? I'm currently taking on new clients and can deliver your first prototype within 48 hours.
           </p>
         </ScrollReveal>
 
@@ -66,7 +66,7 @@ const ContactSection = () => {
               whileTap={{ scale: 0.97 }}
             >
               <Mail className="w-4 h-4" />
-              Say Hello
+              Start Your Project
             </motion.a>
           </div>
         </ScrollReveal>

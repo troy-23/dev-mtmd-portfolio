@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Instagram, Brain, Server, Globe, Wrench, Cloud } from "lucide-react";
+import { Instagram, Brain, Server, Globe, Wrench, Cloud, Play } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 type Tier = {
@@ -200,6 +200,53 @@ const StacksSection = () => {
             </div>
             <span className="font-mono text-xs text-secondary group-hover:translate-x-1 transition-transform">
               view samples →
+            </span>
+          </a>
+        </ScrollReveal>
+
+        {/* Maritime AI Video Demo */}
+        <ScrollReveal delay={0.4}>
+          <a
+            href="https://youtu.be/a_zTLaGDxvg?si=OKo6bnXAQLrJRye_"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 group flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-card border border-primary/30 rounded-sm p-6 card-hover-glow"
+          >
+            <div className="flex items-start gap-4">
+              <div className="p-2 border border-primary/30 rounded-sm">
+                <Play className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <div className="font-mono text-[10px] tracking-widest text-muted-foreground uppercase">
+                  // video demo
+                </div>
+                <h4 className="font-mono text-base font-bold text-foreground mt-1">
+                  Maritime <span className="text-primary text-glow-cyan">AI Video Demo</span>
+                </h4>
+                <p className="text-xs text-muted-foreground mt-1 leading-relaxed max-w-xl">
+                  Complete AI-powered video production workflow — from concept planning to final editing using modern AI tools and platforms.
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <span className="px-2 py-1 bg-primary/[0.1] border border-primary/20 rounded font-mono text-[10px] text-primary/80 uppercase tracking-wider">
+                    CapCut
+                  </span>
+                  <span className="px-2 py-1 bg-primary/[0.1] border border-primary/20 rounded font-mono text-[10px] text-primary/80 uppercase tracking-wider">
+                    ElevenLabs
+                  </span>
+                  <span className="px-2 py-1 bg-primary/[0.1] border border-primary/20 rounded font-mono text-[10px] text-primary/80 uppercase tracking-wider">
+                    Pika Art
+                  </span>
+                  <span className="px-2 py-1 bg-primary/[0.1] border border-primary/20 rounded font-mono text-[10px] text-primary/80 uppercase tracking-wider">
+                    ChatGPT (Script)
+                  </span>
+                  <span className="px-2 py-1 bg-primary/[0.1] border border-primary/20 rounded font-mono text-[10px] text-primary/80 uppercase tracking-wider">
+                    Gemini (Planning)
+                  </span>
+                </div>
+              </div>
+            </div>
+            <span className="font-mono text-xs text-primary group-hover:translate-x-1 transition-transform">
+              watch demo →
             </span>
           </a>
         </ScrollReveal>

@@ -69,7 +69,7 @@ const HeroSection = () => {
           className="flex flex-wrap items-center justify-center gap-3 mb-8"
         >
           <span className="px-4 py-1.5 border border-primary/40 rounded-full font-mono text-xs tracking-wider text-primary uppercase">
-            Full Stack AI Web Engineer
+            Freelance Full Stack Web Developer
           </span>
           <span className="text-muted-foreground/40 font-mono text-xs">×</span>
           <span className="px-4 py-1.5 border border-secondary/40 rounded-full font-mono text-xs tracking-wider text-secondary uppercase">

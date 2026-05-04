@@ -67,6 +67,29 @@ const ProjectsSection = () => {
           </div>
         </ScrollReveal>
 
+        <ScrollReveal delay={0.2}>
+          <div className="mb-12 bg-card border border-border rounded-sm p-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="font-mono text-2xl font-bold text-primary mb-1">15+</div>
+                <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">Projects Delivered</div>
+              </div>
+              <div>
+                <div className="font-mono text-2xl font-bold text-secondary mb-1">48h</div>
+                <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">Avg. Delivery Time</div>
+              </div>
+              <div>
+                <div className="font-mono text-2xl font-bold text-green-500 mb-1">100%</div>
+                <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">Client Satisfaction</div>
+              </div>
+              <div>
+                <div className="font-mono text-2xl font-bold text-foreground mb-1">5★</div>
+                <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">Average Rating</div>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
+
         {isLoading ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[...Array(3)].map((_, i) => (

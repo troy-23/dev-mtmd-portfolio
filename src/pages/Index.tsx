@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ProjectsSection from "@/components/ProjectsSection";
+import ServicesSection from "@/components/ServicesSection";
 import StacksSection from "@/components/StacksSection";
 import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
@@ -20,6 +21,7 @@ const PortfolioContent = () => {
       <Navbar />
       <HeroSection />
       <ProjectsSection />
+      <ServicesSection />
       <StacksSection />
       <AboutSection />
       <ContactSection />

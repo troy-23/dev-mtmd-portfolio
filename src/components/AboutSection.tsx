@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const skills = [
-    { label: "role", value: "Full Stack Web Developer (AI-Assisted)", highlight: "primary" },
-    { label: "specialty", value: "Aspiring Prompt Engineer · Updated on Latest AI Tools", highlight: "secondary" },
+    { label: "role", value: "Freelance Full Stack Web Developer", highlight: "primary" },
+    { label: "specialty", value: "Prompt Engineer · Updated on Latest AI Tools", highlight: "secondary" },
     { label: "frontend", value: "React · TypeScript · Tailwind · Next.js · shadcn/ui", highlight: "default" },
     { label: "backend", value: "Supabase · PostgreSQL · Edge Functions", highlight: "default" },
     { label: "ai stack", value: "OpenAI · Claude · Gemini", highlight: "secondary" },
@@ -41,7 +41,7 @@ const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-base">
-                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — a fresh graduate, aspiring prompt engineer, and full stack web developer who can confidently create a website landing page in 24 hours. I'm always updated on the latest AI tools and workflows, and I'm always curious and willing to learn.
+                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — Fresh graduate with growing experience in prompt engineering and full-stack web development, currently focused on improving skills by building practical projects such as landing pages for small and large businesses, as well as system development. Keeps up with AI tools and workflows and continues learning through hands-on exploration and iteration.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
                 With solid experience in <span className="text-foreground">React, TypeScript, Next.js, and PostgreSQL</span>, I pair traditional web development with AI-assisted workflows using <span className="text-primary">Claude, Gemini, and OpenAI</span>. I leverage tools like <span className="text-primary">Cursor, Copilot, Windsurf, and Codex</span> to build and ship production-ready applications fast.
@@ -54,7 +54,7 @@ const AboutSection = () => {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="pt-4"
+                className="pt-4 flex flex-wrap items-center gap-4"
               >
                 <a
                   href="#contact"
@@ -63,6 +63,42 @@ const AboutSection = () => {
                 >
                   Let's build together →
                 </a>
+                
+                <div className="flex items-center gap-3">
+                  <a
+                    href="/Resumè (1).pdf"
+                    download="Marlone-Troy-Dominguiano-Resume.pdf"
+                    className="inline-flex items-center gap-2 px-4 py-3 border border-border/50 text-muted-foreground font-mono text-xs tracking-wider uppercase hover:border-primary/50 hover:text-primary transition-all group"
+                  >
+                    <svg 
+                      className="w-4 h-4 transition-transform group-hover:scale-110" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                      />
+                    </svg>
+                    Resume
+                  </a>
+                  
+                  <motion.span 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: [0.4, 1, 0.4] }}
+                    transition={{ 
+                      duration: 2, 
+                      repeat: Infinity,
+                      ease: "easeInOut"
+                    }}
+                    className="font-mono text-[10px] text-muted-foreground/60 tracking-wider"
+                  >
+                    PDF • 124KB • (not updated)
+                  </motion.span>
+                </div>
               </motion.div>
             </div>
           </ScrollReveal>
