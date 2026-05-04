@@ -1,18 +1,50 @@
 import { useQuery } from "@tanstack/react-query";
-import { supabase } from "@/integrations/supabase/client";
 import ProjectCard from "./ProjectCard";
 import ScrollReveal from "./ScrollReveal";
+
+const projectsData = [
+  {
+    id: "1",
+    title: "Kensei",
+    description: "Modern mockup concept exploring clean UI, refined typography, and immersive product storytelling — built end-to-end with AI-assisted workflows.",
+    project_url: "https://kensei-v1-mockup.vercel.app/",
+    tech_stack: ["React", "Tailwind CSS", "TypeScript"],
+  },
+  {
+    id: "2",
+    title: "YortyCollects",
+    description: "E-commerce platform for personal collectibles business.",
+    project_url: "https://yorty-gems-collector.lovable.app/",
+    tech_stack: ["React", "Tailwind CSS"],
+  },
+  {
+    id: "3",
+    title: "Hypertroyphy",
+    description: "Complete platform for health & fitness education — workouts, nutrition, and personalized tracking.",
+    project_url: "https://hypertroyphy-fitness.lovable.app/",
+    tech_stack: ["React", "Tailwind CSS"],
+  },
+  {
+    id: "4",
+    title: "Casimiro GPU Repair Shop",
+    description: "A professional landing page for a GPU repair shop — built with React 19, GSAP ScrollTrigger animations, and Tailwind CSS v4.",
+    project_url: "https://casimiro-gpu-repair-shop.vercel.app/",
+    tech_stack: ["React 19", "TypeScript", "Vite 6", "Tailwind CSS v4", "GSAP", "Framer Motion", "Lucide React", "Vercel"],
+  },
+  {
+    id: "5",
+    title: "2K26 Pilot Service",
+    description: "A modern landing page for a 2K26 game pilot/service platform — clean UI with React 19 and Tailwind CSS v4.",
+    project_url: "https://izeinurveinzzz-pilotservice-modern.vercel.app/",
+    tech_stack: ["React 19", "TypeScript", "Vite 6", "Tailwind CSS v4", "Vercel"],
+  },
+];
 
 const ProjectsSection = () => {
   const { data: projects, isLoading } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
-      const { data, error } = await supabase
-        .from("projects")
-        .select("*")
-        .order("display_order", { ascending: true });
-      if (error) throw error;
-      return data;
+      return projectsData;
     },
   });
 
