@@ -238,16 +238,16 @@ const Chatbot = () => {
             {/* Quick Questions */}
             <div className="border-t border-border p-4">
               <p className="font-mono text-xs text-muted-foreground mb-2">Quick Questions:</p>
-              <div className="grid grid-cols-2 gap-2 max-h-32 overflow-y-auto">
+              <div className="space-y-2 max-h-40 overflow-y-auto custom-scrollbar">
                 {preBuiltQuestions.map((q) => (
                   <motion.button
                     key={q.id}
                     onClick={() => handleQuestionClick(q)}
-                    className="text-left p-2 bg-muted hover:bg-muted/80 rounded text-xs font-mono text-foreground transition-colors"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
+                    className="w-full text-left p-2 bg-muted hover:bg-muted/80 rounded text-xs font-mono text-foreground transition-colors border border-transparent hover:border-primary/30"
+                    whileHover={{ scale: 1.01, x: 2 }}
+                    whileTap={{ scale: 0.99 }}
                   >
-                    {q.question.length > 30 ? q.question.substring(0, 30) + "..." : q.question}
+                    {q.question}
                   </motion.button>
                 ))}
               </div>
