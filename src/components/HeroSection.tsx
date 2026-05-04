@@ -69,13 +69,73 @@ const HeroSection = () => {
           className="mb-8"
         >
           <div className="relative inline-block">
-            <motion.img
-              src="/ai-mtmd.png"
-              alt="Marlone Troy Dominguiano - AI Generated Profile"
-              className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-primary/30 shadow-[0_0_40px_hsl(174_100%_50%/0.15)] object-cover"
-              whileHover={{ scale: 1.05, borderColor: "hsl(174 100% 50% / 0.6)" }}
-              transition={{ duration: 0.3 }}
-            />
+            <div className="relative w-32 h-32 md:w-40 md:h-40">
+              {/* Image 1: ai-mtmd */}
+              <motion.img
+                src="/ai-mtmd.png"
+                alt="Marlone Troy Dominguiano - AI Generated Profile"
+                className="absolute inset-0 w-full h-full rounded-full border-2 border-primary/30 shadow-[0_0_40px_hsl(174_100%_50%/0.15)] object-cover"
+                animate={{
+                  opacity: [1, 0, 0, 0, 0, 1],
+                  scale: [1, 0.95, 0.95, 0.95, 0.95, 1]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              {/* Image 2: ai-mtmd-2 */}
+              <motion.img
+                src="/ai-mtmd-2.png"
+                alt="Marlone Troy Dominguiano - AI Generated Profile"
+                className="absolute inset-0 w-full h-full rounded-full border-2 border-primary/30 shadow-[0_0_40px_hsl(174_100%_50%/0.15)] object-cover"
+                animate={{
+                  opacity: [0, 1, 0, 0, 0, 0],
+                  scale: [0.95, 1, 0.95, 0.95, 0.95, 0.95]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              {/* Image 3: ai-mtmd-3 */}
+              <motion.img
+                src="/ai-mtmd-3.png"
+                alt="Marlone Troy Dominguiano - AI Generated Profile"
+                className="absolute inset-0 w-full h-full rounded-full border-2 border-primary/30 shadow-[0_0_40px_hsl(174_100%_50%/0.15)] object-cover"
+                animate={{
+                  opacity: [0, 0, 1, 0, 1, 0],
+                  scale: [0.95, 0.95, 1, 0.95, 1, 0.95]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              />
+              
+              {/* Image 4: ai-mtmd-4 */}
+              <motion.img
+                src="/ai-mtmd-4.png"
+                alt="Marlone Troy Dominguiano - AI Generated Profile"
+                className="absolute inset-0 w-full h-full rounded-full border-2 border-primary/30 shadow-[0_0_40px_hsl(174_100%_50%/0.15)] object-cover"
+                animate={{
+                  opacity: [0, 0, 0, 1, 0, 0],
+                  scale: [0.95, 0.95, 0.95, 1, 0.95, 0.95]
+                }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                whileHover={{ scale: 1.05, borderColor: "hsl(174 100% 50% / 0.6)" }}
+              />
+              
+                          </div>
             <motion.div
               animate={{ opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity }}
