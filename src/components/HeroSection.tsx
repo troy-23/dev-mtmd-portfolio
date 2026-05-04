@@ -63,6 +63,28 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="mb-8"
+        >
+          <div className="relative inline-block">
+            <motion.img
+              src="/ai-mtmd.png"
+              alt="Marlone Troy Dominguiano - AI Generated Profile"
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-primary/30 shadow-[0_0_40px_hsl(174_100%_50%/0.15)] object-cover"
+              whileHover={{ scale: 1.05, borderColor: "hsl(174 100% 50% / 0.6)" }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.div
+              animate={{ opacity: [0.5, 1, 0.5] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="absolute -bottom-1 -right-1 w-6 h-6 bg-neon-green rounded-full border-2 border-background"
+            />
+          </div>
+        </motion.div>
+
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
