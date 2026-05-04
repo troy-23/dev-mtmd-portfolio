@@ -65,10 +65,12 @@ const AboutSection = () => {
                 </a>
                 
                 <div className="flex items-center gap-3">
-                  <a
+                  <motion.a
                     href="/Resumè (1).pdf"
                     download="Marlone-Troy-Dominguiano-Resume.pdf"
-                    className="inline-flex items-center gap-2 px-4 py-3 border border-border/50 text-muted-foreground font-mono text-xs tracking-wider uppercase hover:border-primary/50 hover:text-primary transition-all group"
+                    className="relative inline-flex items-center gap-2 px-4 py-3 border border-primary/30 text-primary font-mono text-xs tracking-wider uppercase transition-all group overflow-hidden"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                   >
                     <svg 
                       className="w-4 h-4 transition-transform group-hover:scale-110" 
@@ -84,7 +86,39 @@ const AboutSection = () => {
                       />
                     </svg>
                     Resume
-                  </a>
+                    {/* Glowing border animation */}
+                    <motion.div
+                      className="absolute inset-0 rounded-sm"
+                      style={{
+                        background: "linear-gradient(45deg, transparent, hsl(174 100% 50% / 0.3), transparent)",
+                        backgroundSize: "200% 200%",
+                      }}
+                      animate={{
+                        backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                    />
+                    {/* Pulsing glow effect */}
+                    <motion.div
+                      className="absolute inset-0 rounded-sm border border-primary"
+                      animate={{
+                        boxShadow: [
+                          "0 0 0 0 hsl(174 100% 50% / 0.4)",
+                          "0 0 0 8px hsl(174 100% 50% / 0)",
+                          "0 0 0 0 hsl(174 100% 50% / 0.4)",
+                        ],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                    />
+                  </motion.a>
                   
                   <motion.span 
                     initial={{ opacity: 0 }}
@@ -115,12 +149,13 @@ const AboutSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
-                  className={`flex justify-between items-center py-3 ${i < skills.length - 1 ? "border-b border-border/50" : ""}`}
                 >
-                  <span className="text-muted-foreground font-mono text-xs uppercase tracking-wider">{skill.label}</span>
-                  <span className={`font-mono text-xs sm:text-sm text-right ${highlightColor[skill.highlight as keyof typeof highlightColor]}`}>
-                    {skill.value}
-                  </span>
+                  <div className={`grid grid-cols-[1fr,1fr] gap-4 py-3 items-start ${i < skills.length - 1 ? "border-b border-border/50" : ""}`}>
+                    <span className="text-muted-foreground font-mono text-xs uppercase tracking-wider">{skill.label}</span>
+                    <span className={`font-mono text-xs sm:text-sm text-right ${highlightColor[skill.highlight as keyof typeof highlightColor]}`}>
+                      {skill.value}
+                    </span>
+                  </div>
                 </motion.div>
               ))}
             </div>

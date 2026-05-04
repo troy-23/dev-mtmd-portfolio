@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import SplashCursor from "@/components/SplashCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import BackToTop from "@/components/BackToTop";
+import Chatbot from "@/components/Chatbot";
 import { AnimationsProvider } from "@/hooks/use-animations";
 import { useAnimations } from "@/hooks/use-animations";
 
@@ -27,6 +28,7 @@ const PortfolioContent = () => {
       <ContactSection />
       <Footer />
       <BackToTop />
+      <Chatbot />
     </div>
   );
 };
