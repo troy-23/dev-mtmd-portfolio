@@ -25,10 +25,7 @@ const Footer = () => {
           </a>
         </div>
 
-        <div className="font-mono text-xs text-muted-foreground">
-          built with <span className="text-primary">precision</span> & <span className="text-secondary">AI</span>
-        </div>
-      </div>
+              </div>
     </footer>
   );
 };
