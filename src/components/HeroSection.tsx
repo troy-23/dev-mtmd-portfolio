@@ -95,7 +95,7 @@ const HeroSection = () => {
           </span>
           <span className="text-muted-foreground/40 font-mono text-xs">×</span>
           <span className="px-4 py-1.5 border border-secondary/40 rounded-full font-mono text-xs tracking-wider text-secondary uppercase">
-            Prompt Engineer
+            Aspiring Prompt Engineer
           </span>
         </motion.div>
 
