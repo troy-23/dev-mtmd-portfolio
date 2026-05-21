@@ -1,0 +1,108 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 4240 >>
+stream
+BT /F2 20 Tf 44 748 Td (MARLONE TROY DOMINGUIANO) Tj ET
+BT /F1 10.5 Tf 44 724 Td (AI-Assisted Full Stack Developer | AI Content Creator | Prompt Engineer) Tj ET
+BT /F1 8.8 Tf 44 709 Td (Email: marlonetroy00@gmail.com) Tj ET
+BT /F1 8.8 Tf 44 697.5 Td (GitHub: github.com/troy-23) Tj ET
+BT /F1 8.8 Tf 44 686 Td (Portfolio: dev-mtmd-portfolio) Tj ET
+BT /F1 8.8 Tf 44 674.5 Td (Instagram: @lone.yort) Tj ET
+0.82 0.86 0.9 RG 44 659 m 568 659 l S
+BT /F2 10 Tf 44 643 Td (PROFILE) Tj ET
+0.82 0.86 0.9 RG 44 628 m 568 628 l S
+BT /F1 9.2 Tf 44 616 Td (Graduating developer focused on AI-assisted full stack web development, prompt engineering, and AI) Tj ET
+BT /F1 9.2 Tf 44 603.5 Td (content creation. Builds practical landing pages, business websites, e-commerce concepts, automation) Tj ET
+BT /F1 9.2 Tf 44 591 Td (workflows, and generative media using modern AI tools and production web stacks. Strong at turning) Tj ET
+BT /F1 9.2 Tf 44 578.5 Td (unclear ideas into prompts, prototypes, deployed products, and content systems.) Tj ET
+BT /F2 10 Tf 44 559 Td (CORE SKILLS) Tj ET
+0.82 0.86 0.9 RG 44 544 m 568 544 l S
+BT /F1 9.2 Tf 44 532 Td (Web Development: React, TypeScript, Next.js, Vite, Tailwind CSS, shadcn/ui, Framer Motion, GSAP) Tj ET
+BT /F1 9.2 Tf 44 516.5 Td (Backend and Data: Supabase, PostgreSQL, authentication concepts, API development, edge functions) Tj ET
+BT /F1 9.2 Tf 44 501 Td (AI and Prompting: OpenAI, Claude, Gemini, prompt design, AI-assisted coding, workflow planning) Tj ET
+BT /F1 9.2 Tf 44 485.5 Td (AI Content Creation: Veo, Pika, ElevenLabs, CapCut, scriptwriting, voice synthesis, product animation) Tj ET
+BT /F1 9.2 Tf 44 473 Td (concepts) Tj ET
+BT /F1 9.2 Tf 44 457.5 Td (Deployment and Tools: Vercel, Cloudflare Workers, Docker, GitHub, Cursor, Copilot, Windsurf, Codex) Tj ET
+BT /F1 9.2 Tf 44 442 Td (Technical Support: PC assembly, hardware troubleshooting, diagnostics, software setup) Tj ET
+BT /F2 10 Tf 44 422.5 Td (SELECTED PROJECTS) Tj ET
+0.82 0.86 0.9 RG 44 407.5 m 568 407.5 l S
+BT /F2 10 Tf 44 395.5 Td (Kensei - Product Mockup Website) Tj ET
+BT /F1 8.8 Tf 44 382.5 Td (React, TypeScript, Tailwind CSS) Tj ET
+BT /F1 8.9 Tf 56 370.5 Td (- Built a modern product storytelling mockup with refined typography, clean UI structure, and) Tj ET
+BT /F1 8.9 Tf 56 358.5 Td (  AI-assisted content direction.) Tj ET
+BT /F1 8.9 Tf 56 346.5 Td (- Used AI-assisted workflows to move from concept planning to responsive implementation and) Tj ET
+BT /F1 8.9 Tf 56 334.5 Td (  deployment.) Tj ET
+BT /F2 10 Tf 44 318.5 Td (YortyCollects - Collectibles E-Commerce Platform) Tj ET
+BT /F1 8.8 Tf 44 305.5 Td (React, Tailwind CSS, AI-assisted content workflow) Tj ET
+BT /F1 8.9 Tf 56 293.5 Td (- Created an e-commerce concept for a collectibles business with storefront structure and) Tj ET
+BT /F1 8.9 Tf 56 281.5 Td (  product-focused presentation.) Tj ET
+BT /F1 8.9 Tf 56 269.5 Td (- Supported real business content direction through AI-generated media ideas and product animation) Tj ET
+BT /F1 8.9 Tf 56 257.5 Td (  planning.) Tj ET
+BT /F2 10 Tf 44 241.5 Td (Casimiro GPU Repair Shop - Service Landing Page) Tj ET
+BT /F1 8.8 Tf 44 228.5 Td (React 19, TypeScript, Vite 6, Tailwind CSS v4, GSAP, Framer Motion, Vercel) Tj ET
+BT /F1 8.9 Tf 56 216.5 Td (- Developed a professional repair shop landing page with service-focused copy, responsive layout,) Tj ET
+BT /F1 8.9 Tf 56 204.5 Td (  and scroll animations.) Tj ET
+BT /F1 8.9 Tf 56 192.5 Td (- Deployed the site on Vercel and structured the page for fast scanning by potential customers.) Tj ET
+BT /F2 10 Tf 44 176.5 Td (2K26 Pilot Service - Service Landing Page) Tj ET
+BT /F1 8.8 Tf 44 163.5 Td (React 19, TypeScript, Vite 6, Tailwind CSS v4, Vercel) Tj ET
+BT /F1 8.9 Tf 56 151.5 Td (- Built a modern landing page for a game service offer with clear positioning, fast load times,) Tj ET
+BT /F1 8.9 Tf 56 139.5 Td (  and responsive UI.) Tj ET
+BT /F2 10 Tf 44 123.5 Td (Maritime AI Video Demo) Tj ET
+BT /F1 8.8 Tf 44 110.5 Td (ChatGPT, Gemini, Pika, ElevenLabs, CapCut) Tj ET
+BT /F1 8.9 Tf 56 98.5 Td (- Produced an AI-assisted video workflow from concept planning and scriptwriting to voice) Tj ET
+BT /F1 8.9 Tf 56 86.5 Td (  generation, visuals, and final editing.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 1083 >>
+stream
+BT /F2 10 Tf 44 744 Td (EXPERIENCE) Tj ET
+0.82 0.86 0.9 RG 44 729 m 568 729 l S
+BT /F2 10 Tf 44 717 Td (Freelance AI-Assisted Developer and Content Creator) Tj ET
+BT /F1 8.8 Tf 44 704 Td (Project-based | Web development, AI workflows, content production) Tj ET
+BT /F1 8.9 Tf 56 692 Td (- Delivered practical websites, prototypes, and landing pages for small business and) Tj ET
+BT /F1 8.9 Tf 56 680 Td (  creator-focused use cases.) Tj ET
+BT /F1 8.9 Tf 56 668 Td (- Used AI tools to accelerate requirements planning, copywriting, UI ideation, code) Tj ET
+BT /F1 8.9 Tf 56 656 Td (  implementation, debugging, and iteration.) Tj ET
+BT /F1 8.9 Tf 56 644 Td (- Created AI-assisted scripts, voiceovers, visual concepts, and product content for social and) Tj ET
+BT /F1 8.9 Tf 56 632 Td (  business channels.) Tj ET
+BT /F2 10 Tf 44 612 Td (EDUCATION) Tj ET
+0.82 0.86 0.9 RG 44 597 m 568 597 l S
+BT /F1 9.2 Tf 44 585 Td (Graduating student pursuing work in software development, AI-assisted development, prompt engineering,) Tj ET
+BT /F1 9.2 Tf 44 572.5 Td (and AI content creation.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000004558 00000 n 
+0000004694 00000 n 
+0000005829 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+5965
+%%EOF

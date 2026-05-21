@@ -17,26 +17,26 @@ const tiers: Tier[] = [
     key: "ai-systems",
     label: "tier_01",
     title: "AI & LLM Tools",
-    blurb: "The AI models and tools I use for prompt engineering and generative workflows.",
+    blurb: "The AI models and tools I use for prompting, content creation, coding assistance, and generative workflows.",
     color: "primary",
     icon: Brain,
     items: [
-      { name: "OpenAI / Claude / Gemini", note: "Multi-model prompting for diverse AI tasks." },
-      { name: "ElevenLabs", note: "Voice synthesis for AI-powered audio pipelines." },
+      { name: "OpenAI / Claude / Gemini", note: "Multi-model prompting for planning, coding, research, and content production." },
+      { name: "Veo / Pika / ElevenLabs", note: "AI video concepts, product animations, and voice synthesis pipelines." },
     ],
   },
   {
     key: "fullstack",
     label: "tier_02",
     title: "Full Stack Web Dev (AI-Assisted)",
-    blurb: "Modern web development powered by AI tools — landing pages shipped in 24 hours.",
+    blurb: "Modern web development powered by AI tools, fast iteration, and production-minded deployment.",
     color: "secondary",
     icon: Server,
     items: [
       { name: "React 19 · TypeScript · Next.js", note: "Production frontend with SSR, ISR, and app router." },
       { name: "Tailwind CSS v4 · shadcn/ui · Framer Motion", note: "Design systems with interaction quality." },
       { name: "GSAP · ScrollTrigger", note: "Advanced scroll-driven animations and transitions." },
-      { name: "Supabase · PostgreSQL", note: "Auth, realtime, edge functions, and raw SQL." },
+      { name: "Supabase · PostgreSQL", note: "Auth, database modeling, realtime features, edge functions, and raw SQL." },
       { name: "Vite 6", note: "Lightning-fast dev server and optimized production builds." },
     ],
   },
@@ -44,14 +44,14 @@ const tiers: Tier[] = [
     key: "infra",
     label: "tier_03",
     title: "Infra & Dev Tools",
-    blurb: "Deployment, edge compute, and the AI-native development toolkit.",
+    blurb: "Deployment, edge compute, hardware troubleshooting, and the AI-native development toolkit.",
     color: "neon-green",
     icon: Cloud,
     items: [
       { name: "Vercel", note: "Production deployments with edge middleware and analytics." },
       { name: "Cloudflare Workers", note: "Edge compute, KV storage, and global distribution." },
       { name: "Docker", note: "Containerized deployments and reproducible environments." },
-      { name: "Cursor · Copilot · Windsurf · Codex", note: "AI-native IDEs for rapid development." },
+      { name: "Cursor · Copilot · Windsurf · Codex", note: "AI-native IDEs for rapid development, refactoring, and debugging." },
     ],
   },
 ];
@@ -154,13 +154,13 @@ const StacksSection = () => {
                   How I <span className="text-primary text-glow-cyan">Develop</span>
                 </h3>
                 <p className="text-xs text-muted-foreground mt-3 leading-relaxed">
-                  Every system follows a clear pipeline: architecture → implementation → deployment → iteration. No prototypes without production plans.
+                  Every system follows a clear pipeline: plan the outcome, prompt with intent, build the product, deploy it, then improve from feedback.
                 </p>
               </div>
               <div className="md:col-span-2 grid sm:grid-cols-2 gap-4">
                 {[
-                  { k: "Architecture", v: "Design data flow, pick the right models, define retrieval strategy and evaluation criteria." },
-                  { k: "Implementation", v: "Type-safe full stack — React + Next.js frontend, PostgreSQL + edge functions backend, LLM orchestration layer." },
+                  { k: "Architecture", v: "Map the user flow, data needs, AI use cases, content direction, and deployment requirements before building." },
+                  { k: "Implementation", v: "Type-safe full stack with React, Next.js, Tailwind, PostgreSQL, Supabase, and AI-assisted coding workflows." },
                   { k: "Deployment", v: "Vercel for web, Cloudflare for edge, Docker for services. CI/CD with zero-downtime deploys." },
                   { k: "Iteration", v: "Monitor, measure, improve. Analytics, error tracking, and user feedback loops built in from day one." },
                 ].map((step) => (
@@ -194,7 +194,7 @@ const StacksSection = () => {
                   AI-generated content for <span className="text-secondary text-glow-pink">@yortycollects</span>
                 </h4>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed max-w-xl">
-                  Production AI media — Veo 3.1 visualizations, ElevenLabs voice synthesis, and Gemini-powered product animations deployed for a real business.
+                  Production AI media: Veo visualizations, ElevenLabs voice synthesis, Gemini-assisted product animation planning, and content workflows for a real business.
                 </p>
               </div>
             </div>
@@ -224,7 +224,7 @@ const StacksSection = () => {
                   Maritime <span className="text-primary text-glow-cyan">AI Video Demo</span>
                 </h4>
                 <p className="text-xs text-muted-foreground mt-1 leading-relaxed max-w-xl">
-                  Complete AI-powered video production workflow — from concept planning to final editing using modern AI tools and platforms.
+                  Complete AI-powered video production workflow from concept planning and scriptwriting to voice, visuals, and final editing.
                 </p>
                 <div className="mt-3 flex flex-wrap gap-2">
                   <span className="px-2 py-1 bg-primary/[0.1] border border-primary/20 rounded font-mono text-[10px] text-primary/80 uppercase tracking-wider">

@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   const skills = [
-    { label: "role", value: "Freelance Full Stack Web Developer", highlight: "primary" },
-    { label: "specialty", value: "Prompt Engineer · Updated on Latest AI Tools", highlight: "secondary" },
+    { label: "role", value: "AI-Assisted Full Stack Developer", highlight: "primary" },
+    { label: "specialty", value: "AI Content Creator · Prompt Engineer", highlight: "secondary" },
     { label: "frontend", value: "React · TypeScript · Tailwind · Next.js · shadcn/ui", highlight: "default" },
     { label: "backend", value: "Supabase · PostgreSQL · Edge Functions", highlight: "default" },
     { label: "ai stack", value: "OpenAI · Claude · Gemini", highlight: "secondary" },
     { label: "builders", value: "Cursor · Copilot · Windsurf · Codex", highlight: "secondary" },
     { label: "hardware", value: "PC Assembly · Troubleshooting · Diagnostics", highlight: "default" },
     { label: "infra", value: "Vercel · Cloudflare · Docker", highlight: "default" },
-    { label: "superpower", value: "ideas → systems → shipped products ✓", highlight: "green" },
+    { label: "superpower", value: "ideas → content → systems → shipped products", highlight: "green" },
   ];
 
   const highlightColor = {
@@ -41,13 +41,13 @@ const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-base">
-                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — Fresh graduate with growing experience in prompt engineering and full-stack web development, currently focused on improving skills by building practical projects such as landing pages for small and large businesses, as well as system development. Keeps up with AI tools and workflows and continues learning through hands-on exploration and iteration.
+                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — a graduating AI-assisted full-stack developer and AI content creator who builds practical web products, landing pages, automation workflows, and generative media for real use cases. I use AI as a serious production tool: planning, prompting, coding, testing, content generation, and iteration.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
-                With solid experience in <span className="text-foreground">React, TypeScript, Next.js, and PostgreSQL</span>, I pair traditional web development with AI-assisted workflows using <span className="text-primary">Claude, Gemini, and OpenAI</span>. I leverage tools like <span className="text-primary">Cursor, Copilot, Windsurf, and Codex</span> to build and ship production-ready applications fast.
+                With hands-on experience in <span className="text-foreground">React, TypeScript, Next.js, Tailwind, Supabase, and PostgreSQL</span>, I pair traditional web development with AI-assisted workflows using <span className="text-primary">Claude, Gemini, OpenAI, Veo, Pika, and ElevenLabs</span>. I leverage tools like <span className="text-primary">Cursor, Copilot, Windsurf, and Codex</span> to move from idea to prototype to deployed product quickly.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
-                Beyond software, I'm skilled in <span className="text-foreground">hardware — PC assembly, disassembly, and troubleshooting</span>. I turn ideas into prompts — and prompts into shipped products. I deploy on <span className="text-foreground">Vercel, Cloudflare Workers, and Docker</span> because production means infrastructure, not just code.
+                Beyond software, I'm skilled in <span className="text-foreground">hardware — PC assembly, disassembly, and troubleshooting</span>. I also create AI-assisted scripts, visuals, voiceovers, product animations, and short-form content. I deploy on <span className="text-foreground">Vercel, Cloudflare Workers, and Docker</span> because production means infrastructure, not just code.
               </p>
 
               <motion.div
@@ -66,7 +66,7 @@ const AboutSection = () => {
                 
                 <div className="flex items-center gap-3">
                   <motion.a
-                    href="/Resumè (1).pdf"
+                    href="/Update v1 resume.pdf"
                     download="Marlone-Troy-Dominguiano-Resume.pdf"
                     className="relative inline-flex items-center gap-2 px-4 py-3 border border-primary/30 text-primary font-mono text-xs tracking-wider uppercase transition-all group overflow-hidden"
                     whileHover={{ scale: 1.05 }}
@@ -130,7 +130,7 @@ const AboutSection = () => {
                     }}
                     className="font-mono text-[10px] text-muted-foreground/60 tracking-wider"
                   >
-                    PDF • 124KB • (not updated)
+                    PDF • updated for applications
                   </motion.span>
                 </div>
               </motion.div>

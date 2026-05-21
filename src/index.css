@@ -300,11 +300,6 @@
     grid-template-columns: 1fr;
   }
   
-  /* Fix flex layouts on mobile */
-  .flex {
-    flex-wrap: wrap;
-  }
-  
   /* Fix any absolute positioned elements */
   .absolute {
     max-width: 100%;

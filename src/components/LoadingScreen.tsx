@@ -1,8 +1,116 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useCallback, useEffect, useRef } from "react";
 import { useLoadingState } from "@/hooks/useLoadingState";
 
 const LoadingScreen = () => {
-  const { isLoading, loadingProgress, isContentReady } = useLoadingState();
+  const { isLoading, loadingProgress } = useLoadingState();
+  const audioContextRef = useRef<AudioContext | null>(null);
+  const masterGainRef = useRef<GainNode | null>(null);
+  const lastProgressSoundRef = useRef(0);
+  const completionPlayedRef = useRef(false);
+
+  const setupAudio = useCallback(async () => {
+    if (typeof window === "undefined") return null;
+
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    if (!AudioContextClass) return null;
+
+    if (!audioContextRef.current) {
+      const context = new AudioContextClass();
+      const masterGain = context.createGain();
+      masterGain.gain.value = 0.035;
+      masterGain.connect(context.destination);
+
+      audioContextRef.current = context;
+      masterGainRef.current = masterGain;
+    }
+
+    if (audioContextRef.current.state === "suspended") {
+      await audioContextRef.current.resume().catch(() => undefined);
+    }
+
+    return audioContextRef.current;
+  }, []);
+
+  const playTone = useCallback((frequency: number, duration = 0.08, type: OscillatorType = "square") => {
+    const context = audioContextRef.current;
+    const masterGain = masterGainRef.current;
+
+    if (!context || !masterGain || context.state !== "running") return;
+
+    const now = context.currentTime;
+    const oscillator = context.createOscillator();
+    const toneGain = context.createGain();
+    const filter = context.createBiquadFilter();
+
+    oscillator.type = type;
+    oscillator.frequency.setValueAtTime(frequency, now);
+    oscillator.frequency.exponentialRampToValueAtTime(Math.max(40, frequency * 0.72), now + duration);
+
+    filter.type = "lowpass";
+    filter.frequency.setValueAtTime(1200, now);
+    filter.frequency.exponentialRampToValueAtTime(420, now + duration);
+
+    toneGain.gain.setValueAtTime(0.0001, now);
+    toneGain.gain.exponentialRampToValueAtTime(0.8, now + 0.012);
+    toneGain.gain.exponentialRampToValueAtTime(0.0001, now + duration);
+
+    oscillator.connect(filter);
+    filter.connect(toneGain);
+    toneGain.connect(masterGain);
+    oscillator.start(now);
+    oscillator.stop(now + duration + 0.02);
+  }, []);
+
+  useEffect(() => {
+    if (!isLoading) return;
+
+    const unlockAudio = () => {
+      setupAudio().then((context) => {
+        if (context?.state === "running") playTone(170, 0.1, "sawtooth");
+      });
+    };
+
+    setupAudio().catch(() => undefined);
+    window.addEventListener("pointerdown", unlockAudio, { once: true });
+    window.addEventListener("keydown", unlockAudio, { once: true });
+    window.addEventListener("touchstart", unlockAudio, { once: true });
+
+    const pulse = window.setInterval(() => {
+      playTone(110 + Math.random() * 45, 0.055, "square");
+    }, 620);
+
+    return () => {
+      window.clearInterval(pulse);
+      window.removeEventListener("pointerdown", unlockAudio);
+      window.removeEventListener("keydown", unlockAudio);
+      window.removeEventListener("touchstart", unlockAudio);
+    };
+  }, [isLoading, playTone, setupAudio]);
+
+  useEffect(() => {
+    if (!isLoading) return;
+
+    if (loadingProgress >= 100 && !completionPlayedRef.current) {
+      completionPlayedRef.current = true;
+      playTone(330, 0.08, "triangle");
+      window.setTimeout(() => playTone(520, 0.12, "triangle"), 90);
+      return;
+    }
+
+    if (loadingProgress - lastProgressSoundRef.current >= 14) {
+      lastProgressSoundRef.current = loadingProgress;
+      playTone(220 + loadingProgress * 2.4, 0.045, "square");
+    }
+  }, [isLoading, loadingProgress, playTone]);
+
+  useEffect(() => {
+    return () => {
+      audioContextRef.current?.close().catch(() => undefined);
+      audioContextRef.current = null;
+      masterGainRef.current = null;
+    };
+  }, []);
 
   return (
     <AnimatePresence>

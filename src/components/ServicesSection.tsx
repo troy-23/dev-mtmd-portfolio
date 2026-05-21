@@ -6,9 +6,9 @@ const services = [
   {
     id: 1,
     icon: Code,
-    title: "Full-Stack Web Development",
-    description: "End-to-end web applications using React, Next.js, TypeScript, and modern backend technologies.",
-    features: ["React/Next.js Apps", "API Development", "Database Design", "Authentication"],
+    title: "AI-Assisted Web Development",
+    description: "End-to-end web applications and business websites built with React, Next.js, TypeScript, and AI-assisted delivery workflows.",
+    features: ["React/Next.js Apps", "API Development", "Database Design", "Rapid Prototyping"],
     delivery: "2-4 weeks",
     pricing: "Starting at $1,500"
   },
@@ -16,26 +16,26 @@ const services = [
     id: 2,
     icon: Globe,
     title: "Landing Pages & Websites",
-    description: "High-converting landing pages and business websites with modern design and optimal performance.",
-    features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Analytics Integration"],
+    description: "Conversion-focused landing pages and portfolio/business websites with modern visuals, clear copy, and strong performance.",
+    features: ["Responsive Design", "SEO Copy", "Fast Loading", "Analytics Integration"],
     delivery: "24-72 hours",
     pricing: "Starting at $500"
   },
   {
     id: 3,
     icon: Zap,
-    title: "AI Integration & Automation",
-    description: "Integrate AI tools and workflows into your existing systems for enhanced productivity.",
-    features: ["AI Tool Integration", "Workflow Automation", "Custom Chatbots", "Process Optimization"],
+    title: "AI Content & Automation",
+    description: "AI-assisted content workflows for scripts, visuals, voiceovers, product animations, chatbots, and repeatable business processes.",
+    features: ["Prompt Systems", "AI Video Content", "Voice Synthesis", "Workflow Automation"],
     delivery: "1-2 weeks",
     pricing: "Starting at $800"
   },
   {
     id: 4,
     icon: Cpu,
-    title: "System Architecture & DevOps",
-    description: "Scalable system design, deployment strategies, and infrastructure optimization.",
-    features: ["System Design", "Cloud Deployment", "Performance Optimization", "Monitoring Setup"],
+    title: "Deployment & Technical Support",
+    description: "Production deployment, troubleshooting, performance cleanup, and technical support across software and PC hardware setups.",
+    features: ["Cloud Deployment", "Performance Cleanup", "PC Diagnostics", "Monitoring Setup"],
     delivery: "1-3 weeks",
     pricing: "Starting at $1,200"
   }
@@ -56,7 +56,7 @@ const ServicesSection = () => {
               What I <span className="text-primary text-glow-cyan">build</span> for clients
             </h2>
             <p className="text-muted-foreground mt-4 max-w-lg mx-auto text-sm">
-              Professional services with transparent pricing and guaranteed delivery timelines.
+              Practical development and AI content services for businesses, creators, and teams that need fast execution.
             </p>
           </div>
         </ScrollReveal>
@@ -141,7 +141,7 @@ const ServicesSection = () => {
               </motion.a>
               
               <motion.a
-                href="/Resumè (1).pdf"
+                href="/Update v1 resume.pdf"
                 download="Marlone-Troy-Dominguiano-Resume.pdf"
                 className="inline-flex items-center gap-2 px-8 py-3 border border-primary/30 text-primary font-mono font-bold text-sm tracking-wider uppercase transition-all duration-300"
                 whileHover={{ scale: 1.03, backgroundColor: "hsl(174 100% 50% / 0.1)" }}

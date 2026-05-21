@@ -7,7 +7,7 @@ import { useLoadingState } from "@/hooks/useLoadingState";
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
   const [shouldStartTyping, setShouldStartTyping] = useState(false);
-  const fullText = "I turn ideas into systems — and systems into shipped products.";
+  const fullText = "I use AI to turn ideas into content, systems, and shipped products.";
   const { isLoading } = useLoadingState();
 
   useEffect(() => {
@@ -30,14 +30,14 @@ const HeroSection = () => {
   }, [shouldStartTyping]);
 
   return (
-    <section id="profile" className="relative min-h-screen flex items-center justify-center grid-bg overflow-hidden overflow-x-hidden">
+    <section id="profile" className="relative min-h-[100svh] flex items-start sm:items-center justify-center grid-bg overflow-hidden overflow-x-hidden pt-24 pb-20 sm:py-28">
       <ParticleField />
       <div className="absolute inset-0 scanline" style={{ zIndex: 2 }} />
 
       <div className="absolute top-1/4 left-1/4 w-[300px] h-[300px] sm:w-[500px] sm:h-[500px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[250px] h-[250px] sm:w-[400px] sm:h-[400px] rounded-full bg-secondary/[0.04] blur-[100px] pointer-events-none" />
 
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div className="relative z-10 text-center px-5 sm:px-6 max-w-5xl mx-auto w-full">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.92 }}
           animate={shouldStartTyping ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          className="font-mono text-5xl md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-[0.95] tracking-tight"
+          className="font-mono text-[clamp(2.55rem,12vw,3.75rem)] md:text-7xl lg:text-8xl font-bold text-foreground mb-6 leading-[0.95]"
         >
           <span className="text-glow-cyan text-primary">Marlone Troy</span>
           <br />
@@ -163,11 +163,11 @@ const HeroSection = () => {
           className="flex flex-wrap items-center justify-center gap-3 mb-8"
         >
           <span className="px-4 py-1.5 border border-primary/40 rounded-full font-mono text-xs tracking-wider text-primary uppercase">
-            Freelance Full Stack Web Developer
+            AI-Assisted Full Stack Developer
           </span>
           <span className="text-muted-foreground/40 font-mono text-xs">×</span>
           <span className="px-4 py-1.5 border border-secondary/40 rounded-full font-mono text-xs tracking-wider text-secondary uppercase">
-            Aspiring Prompt Engineer
+            AI Content Creator
           </span>
         </motion.div>
 
@@ -175,7 +175,7 @@ const HeroSection = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="font-mono text-sm md:text-base text-muted-foreground mb-14 h-8 max-w-2xl mx-auto"
+          className="font-mono text-sm md:text-base text-muted-foreground mb-8 sm:mb-14 min-h-[4.75rem] sm:min-h-0 sm:h-8 max-w-2xl mx-auto px-1"
         >
           <span>{displayed}</span>
           <span className="inline-block w-0.5 h-5 bg-primary ml-1 animate-pulse" />
@@ -185,14 +185,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.3 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full"
         >
           <motion.a
             href="#projects"
             onClick={(e) => { e.preventDefault(); document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" }); }}
             whileHover={{ scale: 1.05, boxShadow: "0 0 40px hsl(174 100% 50% / 0.4)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 bg-primary text-primary-foreground font-mono font-bold text-sm tracking-wider uppercase transition-all duration-300"
+            className="w-full max-w-[260px] sm:w-auto sm:max-w-none px-8 sm:px-10 py-4 bg-primary text-primary-foreground font-mono font-bold text-sm tracking-wider uppercase text-center transition-all duration-300"
           >
             View Projects
           </motion.a>
@@ -201,7 +201,7 @@ const HeroSection = () => {
             onClick={(e) => { e.preventDefault(); document.querySelector("#stacks")?.scrollIntoView({ behavior: "smooth" }); }}
             whileHover={{ scale: 1.05, backgroundColor: "hsl(174 100% 50% / 0.1)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 border border-primary/30 text-primary font-mono font-bold text-sm tracking-wider uppercase transition-all duration-300"
+            className="w-full max-w-[260px] sm:w-auto sm:max-w-none px-8 sm:px-10 py-4 border border-primary/30 text-primary font-mono font-bold text-sm tracking-wider uppercase text-center transition-all duration-300"
           >
             My Stacks
           </motion.a>
@@ -210,10 +210,29 @@ const HeroSection = () => {
             onClick={(e) => { e.preventDefault(); document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" }); }}
             whileHover={{ scale: 1.05, backgroundColor: "hsl(330 100% 60% / 0.1)" }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-4 border border-secondary/30 text-secondary font-mono font-bold text-sm tracking-wider uppercase transition-all duration-300"
+            className="w-full max-w-[260px] sm:w-auto sm:max-w-none px-8 sm:px-10 py-4 border border-secondary/30 text-secondary font-mono font-bold text-sm tracking-wider uppercase text-center transition-all duration-300"
           >
             Hire Me
           </motion.a>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: [0, 8, 0] }}
+          transition={{
+            opacity: { duration: 0.4, delay: 1.6 },
+            y: { duration: 2, repeat: Infinity, delay: 1.6 },
+          }}
+          className="mt-8 flex justify-center sm:hidden"
+          aria-hidden="true"
+        >
+          <div className="w-5 h-8 border border-primary/30 rounded-full flex justify-center pt-1.5">
+            <motion.div
+              animate={{ opacity: [1, 0], y: [0, 12] }}
+              transition={{ duration: 1.5, repeat: Infinity }}
+              className="w-1 h-1 bg-primary rounded-full"
+            />
+          </div>
         </motion.div>
       </div>
 
@@ -233,7 +252,7 @@ const HeroSection = () => {
       <motion.div
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:block"
       >
         <div className="w-5 h-8 border border-primary/30 rounded-full flex justify-center pt-1.5">
           <motion.div
