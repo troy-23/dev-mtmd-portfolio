@@ -96,7 +96,7 @@ const ProjectsSection = () => {
                 <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">Projects Delivered</div>
               </div>
               <div>
-                <div className="font-mono text-2xl font-bold text-secondary mb-1">48h</div>
+                <div className="font-mono text-2xl font-bold text-secondary mb-1">7d</div>
                 <div className="font-mono text-xs text-muted-foreground uppercase tracking-wider">Avg. Delivery Time</div>
               </div>
               <div>
