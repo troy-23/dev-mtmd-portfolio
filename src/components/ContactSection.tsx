@@ -1,12 +1,9 @@
-import { Github, Facebook, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Github, ArrowUpRight, Send } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import { motion } from "framer-motion";
 
 const socials = [
   { icon: Github, label: "GitHub", href: "https://github.com/troy-23", handle: "@troy-23" },
-  { icon: Facebook, label: "Facebook", href: "https://www.facebook.com/yertmontalla", handle: "yertmontalla" },
-  { icon: Mail, label: "Email", href: "mailto:marlonetroy00@gmail.com", handle: "marlonetroy00@gmail.com" },
-  { icon: Instagram, label: "Instagram", href: "https://www.instagram.com/lone.yort/", handle: "@lone.yort" },
 ];
 
 const ContactSection = () => {
@@ -29,11 +26,11 @@ const ContactSection = () => {
 
         <ScrollReveal delay={0.1}>
           <p className="text-muted-foreground text-lg mb-12 max-w-xl">
-            Ready to bring your project to life? I'm currently taking on new clients and can deliver your first prototype within 48 hours.
+            Ready to bring your project to life? I'm currently taking on new clients — landing pages ship in about 4-7 days, full builds in 20+ days, with timelines that flex to fit your goals.
           </p>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           {socials.map((social, i) => (
             <ScrollReveal key={social.label} delay={i * 0.08}>
               <motion.a
@@ -60,12 +57,13 @@ const ContactSection = () => {
         <ScrollReveal delay={0.4}>
           <div className="mt-16 text-center">
             <motion.a
-              href="mailto:marlonetroy00@gmail.com"
+              href="#work-with-me"
+              onClick={(e) => { e.preventDefault(); document.querySelector("#work-with-me")?.scrollIntoView({ behavior: "smooth" }); }}
               className="inline-flex items-center gap-3 px-10 py-4 bg-primary text-primary-foreground font-mono font-bold text-sm tracking-wider uppercase transition-all duration-300"
               whileHover={{ scale: 1.03, boxShadow: "0 0 40px hsl(174 100% 50% / 0.3)" }}
               whileTap={{ scale: 0.97 }}
             >
-              <Mail className="w-4 h-4" />
+              <Send className="w-4 h-4" />
               Start Your Project
             </motion.a>
           </div>

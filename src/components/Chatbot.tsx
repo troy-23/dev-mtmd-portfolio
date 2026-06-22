@@ -20,25 +20,25 @@ const preBuiltQuestions: Question[] = [
   {
     id: "1",
     question: "What services do you offer?",
-    answer: "I offer comprehensive web development services including:\n\n• Full-Stack Web Development (React, Next.js, TypeScript)\n• Landing Pages & Business Websites\n• AI Integration & Automation\n• System Architecture & DevOps\n• E-commerce Solutions\n\nEach service includes transparent pricing and guaranteed delivery timelines.",
+    answer: "I offer comprehensive web development services including:\n\n• Full-Stack Web Development (React, Next.js, TypeScript)\n• Landing Pages & Business Websites\n• AI Integration & Automation\n• System Architecture & DevOps\n• E-commerce Solutions\n\nEach service includes a clear scope, proposal, and delivery timeline.",
     category: "services"
   },
   {
     id: "2", 
-    question: "How much do you charge for a landing page?",
-    answer: "Landing pages start at $500 with the following:\n\n• Basic Landing Page: $500 (24-48 hours)\n• Advanced Landing Page: $800 (48-72 hours)\n• Premium Landing Page: $1,200+ (3-5 days)\n\nAll include responsive design, SEO optimization, and deployment. Get a free quote with your specific requirements!",
-    category: "pricing"
+    question: "Can I get a quote for a landing page?",
+    answer: "Yes. Landing page quotes depend on scope, content needs, integrations, and timeline.\n\n- Most landing pages: 4-7 days (about a week)\n- Full stack builds: 20+ days\n\nAll include responsive design, SEO optimization, and deployment. Timelines flex to fit what you need — share your requirements for a free quote.",
+    category: "quotes"
   },
   {
     id: "3",
     question: "What's your typical project timeline?",
-    answer: "Project timelines vary by complexity:\n\n• Landing Pages: 24-72 hours\n• Full Websites: 1-2 weeks\n• Web Applications: 2-4 weeks\n• Complex Systems: 4-8 weeks\n\nI pride myself on fast delivery without compromising quality. Most projects start within 24 hours of approval.",
+    answer: "Project timelines depend on scope and what you're after:\n\n• Landing Pages: 4-7 days (about a week)\n• Full Stack Builds: 20+ days\n\nTimelines flex based on complexity and your goals. I focus on fast delivery without cutting corners, and you'll get regular updates along the way.",
     category: "timeline"
   },
   {
     id: "4",
     question: "Do you work with startups and small businesses?",
-    answer: "Absolutely! I specialize in helping startups and small businesses:\n\n• Flexible pricing for early-stage companies\n• Scalable solutions that grow with your business\n• MVP development for quick market entry\n• Ongoing support and maintenance\n\nMany of my portfolio projects are for startups and SMBs.",
+    answer: "Absolutely! I specialize in helping startups and small businesses:\n\n• Flexible scopes for early-stage companies\n• Scalable solutions that grow with your business\n• MVP development for quick market entry\n• Ongoing support and maintenance\n\nMany of my portfolio projects are for startups and SMBs.",
     category: "clients"
   },
   {
@@ -50,7 +50,7 @@ const preBuiltQuestions: Question[] = [
   {
     id: "6",
     question: "How do I start a project with you?",
-    answer: "Getting started is simple:\n\n1. **Initial Consultation** - Free 30-minute call to discuss your needs\n2. **Project Proposal** - Detailed quote and timeline within 24 hours\n3. **Deposit & Kickoff** - 50% deposit to begin work\n4. **Development & Updates** - Regular progress updates\n5. **Review & Launch** - Final revisions and deployment\n\nReady to start? Email me at marlonetroy00@gmail.com!",
+    answer: "Getting started is simple:\n\n1. **Initial Consultation** - Free 30-minute call to discuss your needs\n2. **Project Proposal** - Detailed quote and timeline, sent over promptly\n3. **Deposit & Kickoff** - 50% deposit to begin work\n4. **Development & Updates** - Regular progress updates\n5. **Review & Launch** - Final revisions and deployment\n\nReady to start? Reach out through the contact section and I'll get back to you fast!",
     category: "process"
   }
 ];

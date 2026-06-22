@@ -12,6 +12,8 @@ export function AnimationsProvider({ children }: { children: ReactNode }) {
     if (typeof window !== "undefined") {
       const stored = localStorage.getItem("animations");
       if (stored !== null) return stored === "on";
+      // No saved preference: respect the OS "reduce motion" setting.
+      return !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     }
     return false;
   });

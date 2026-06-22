@@ -14,11 +14,14 @@ import LoadingScreen from "@/components/LoadingScreen";
 import { useLoadingState } from "@/hooks/useLoadingState";
 import { AnimationsProvider } from "@/hooks/use-animations";
 import { useAnimations } from "@/hooks/use-animations";
+import { useSmoothScroll } from "@/hooks/useSmoothScroll";
 
 const PortfolioContent = () => {
   const { enabled } = useAnimations();
   const { isLoading, isContentReady } = useLoadingState();
-  
+
+  useSmoothScroll(enabled);
+
   return (
     <>
       <LoadingScreen />

@@ -7,7 +7,7 @@ import { useLoadingState } from "@/hooks/useLoadingState";
 const HeroSection = () => {
   const [displayed, setDisplayed] = useState("");
   const [shouldStartTyping, setShouldStartTyping] = useState(false);
-  const fullText = "I use AI to turn ideas into content, systems, and shipped products.";
+  const fullText = "An idealist who uses AI to turn ideas into content, systems, and shipped products — responsive, responsible, reliable.";
   const { isLoading } = useLoadingState();
 
   useEffect(() => {
@@ -169,13 +169,17 @@ const HeroSection = () => {
           <span className="px-4 py-1.5 border border-secondary/40 rounded-full font-mono text-xs tracking-wider text-secondary uppercase">
             AI Content Creator
           </span>
+          <span className="text-muted-foreground/40 font-mono text-xs">×</span>
+          <span className="px-4 py-1.5 border border-neon-green/40 rounded-full font-mono text-xs tracking-wider text-neon-green uppercase">
+            Freelance Web Developer
+          </span>
         </motion.div>
 
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="font-mono text-sm md:text-base text-muted-foreground mb-8 sm:mb-14 min-h-[4.75rem] sm:min-h-0 sm:h-8 max-w-2xl mx-auto px-1"
+          className="font-mono text-sm md:text-base text-muted-foreground mb-8 sm:mb-14 min-h-[6rem] sm:min-h-[3rem] max-w-2xl mx-auto px-1"
         >
           <span>{displayed}</span>
           <span className="inline-block w-0.5 h-5 bg-primary ml-1 animate-pulse" />

@@ -7,37 +7,33 @@ const services = [
     id: 1,
     icon: Code,
     title: "AI-Assisted Web Development",
-    description: "End-to-end web applications and business websites built with React, Next.js, TypeScript, and AI-assisted delivery workflows.",
-    features: ["React/Next.js Apps", "API Development", "Database Design", "Rapid Prototyping"],
-    delivery: "2-4 weeks",
-    pricing: "Starting at $1,500"
+    description: "Complete web applications and business websites — built with React, Next.js, and TypeScript, or whatever stack the project actually needs. Because I work AI-first, I'm not locked to one toolset; I adapt to the right tools and ship fast without cutting corners.",
+    features: ["Stack-Flexible", "API Development", "Database Design", "Rapid Prototyping"],
+    delivery: "20+ days"
   },
   {
     id: 2,
     icon: Globe,
     title: "Landing Pages & Websites",
-    description: "Conversion-focused landing pages and portfolio/business websites with modern visuals, clear copy, and strong performance.",
+    description: "Landing pages and portfolio or business sites built to convert, with modern visuals, clear copy, and the kind of performance that keeps visitors around.",
     features: ["Responsive Design", "SEO Copy", "Fast Loading", "Analytics Integration"],
-    delivery: "24-72 hours",
-    pricing: "Starting at $500"
+    delivery: "4-7 days"
   },
   {
     id: 3,
     icon: Zap,
     title: "AI Content & Automation",
-    description: "AI-assisted content workflows for scripts, visuals, voiceovers, product animations, chatbots, and repeatable business processes.",
+    description: "AI-assisted content workflows covering scripts, visuals, voiceovers, product animations, and chatbots, plus automation for the repetitive tasks that eat up your time.",
     features: ["Prompt Systems", "AI Video Content", "Voice Synthesis", "Workflow Automation"],
-    delivery: "1-2 weeks",
-    pricing: "Starting at $800"
+    delivery: "1-2 weeks"
   },
   {
     id: 4,
     icon: Cpu,
     title: "Deployment & Technical Support",
-    description: "Production deployment, troubleshooting, performance cleanup, and technical support across software and PC hardware setups.",
+    description: "Production deployment, troubleshooting, and performance cleanup, plus hands-on technical support across both software and PC hardware.",
     features: ["Cloud Deployment", "Performance Cleanup", "PC Diagnostics", "Monitoring Setup"],
-    delivery: "1-3 weeks",
-    pricing: "Starting at $1,200"
+    delivery: "1-3 weeks"
   }
 ];
 
@@ -50,13 +46,14 @@ const ServicesSection = () => {
         <ScrollReveal>
           <div className="mb-16 text-center">
             <span className="font-mono text-xs text-primary tracking-widest uppercase">
-              // services & pricing
+              // services
             </span>
             <h2 className="font-mono text-3xl md:text-5xl font-bold text-foreground mt-3">
               What I <span className="text-primary text-glow-cyan">build</span> for clients
             </h2>
-            <p className="text-muted-foreground mt-4 max-w-lg mx-auto text-sm">
-              Practical development and AI content services for businesses, creators, and teams that need fast execution.
+            <p className="text-muted-foreground mt-4 max-w-xl mx-auto text-sm">
+              Development and AI content services for businesses, creators, and teams — pairing
+              real fundamentals with smart use of AI to solve practical problems, fast.
             </p>
           </div>
         </ScrollReveal>
@@ -96,15 +93,10 @@ const ServicesSection = () => {
                       </div>
                       
                       <div className="flex items-center justify-between pt-3 border-t border-border/50">
-                        <div className="flex items-center gap-4">
-                          <div className="flex items-center gap-1">
-                            <Clock className="w-3 h-3 text-muted-foreground" />
-                            <span className="font-mono text-xs text-muted-foreground">
-                              {service.delivery}
-                            </span>
-                          </div>
-                          <span className="font-mono text-xs text-primary font-bold">
-                            {service.pricing}
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-3 h-3 text-muted-foreground" />
+                          <span className="font-mono text-xs text-muted-foreground">
+                            {service.delivery}
                           </span>
                         </div>
                         <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
@@ -121,10 +113,12 @@ const ServicesSection = () => {
           <div className="bg-card border border-border rounded-sm p-8">
             <div className="text-center mb-6">
               <h3 className="font-mono text-xl font-bold text-foreground mb-2">
-                Ready to start your project?
+                Ready to build your portfolio website?
               </h3>
               <p className="text-muted-foreground text-sm mb-6">
-                Get a free consultation and detailed proposal within 24 hours.
+                Let's turn your idea into a site that actually ships. Landing pages in
+                <span className="text-primary"> 4-7 days</span>, full builds in
+                <span className="text-primary"> 20+ days</span> — timelines flex to fit what you need.
               </p>
             </div>
             
@@ -158,9 +152,9 @@ const ServicesSection = () => {
                   Available for projects
                 </span>
                 <span>•</span>
-                <span>24h response time</span>
+                <span>Fast turnaround</span>
                 <span>•</span>
-                <span>Satisfaction guaranteed</span>
+                <span>Clear scope &amp; updates</span>
               </div>
             </div>
           </div>

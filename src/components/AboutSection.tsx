@@ -4,13 +4,15 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
   const skills = [
     { label: "role", value: "AI-Assisted Full Stack Developer", highlight: "primary" },
-    { label: "specialty", value: "AI Content Creator · Prompt Engineer", highlight: "secondary" },
-    { label: "frontend", value: "React · TypeScript · Tailwind · Next.js · shadcn/ui", highlight: "default" },
-    { label: "backend", value: "Supabase · PostgreSQL · Edge Functions", highlight: "default" },
-    { label: "ai stack", value: "OpenAI · Claude · Gemini", highlight: "secondary" },
+    { label: "ai skills", value: "Agentic Coding · Prompt Engineering", highlight: "secondary" },
+    { label: "specialty", value: "AI Content Creator · Automation", highlight: "secondary" },
+    { label: "frontend", value: "React, Next.js & most modern web UI", highlight: "default" },
+    { label: "backend", value: "APIs, databases & serverless functions", highlight: "default" },
+    { label: "ai stack", value: "Claude Opus · OpenAI · Gemini & more", highlight: "secondary" },
     { label: "builders", value: "Cursor · Copilot · Windsurf · Codex", highlight: "secondary" },
     { label: "hardware", value: "PC Assembly · Troubleshooting · Diagnostics", highlight: "default" },
     { label: "infra", value: "Vercel · Cloudflare · Docker", highlight: "default" },
+    { label: "flexibility", value: "Stack-flexible — AI lets me adapt to any tool", highlight: "primary" },
     { label: "superpower", value: "ideas → content → systems → shipped products", highlight: "green" },
   ];
 
@@ -41,10 +43,10 @@ const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <p className="text-muted-foreground leading-relaxed text-base">
-                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — a graduating AI-assisted full-stack developer and AI content creator who builds practical web products, landing pages, automation workflows, and generative media for real use cases. I use AI as a serious production tool: planning, prompting, coding, testing, content generation, and iteration.
+                I'm <span className="text-foreground font-semibold">Marlone Troy Dominguiano</span> — a graduating full-stack developer and AI content creator who builds practical web products, landing pages, automation workflows, and generative media for real use cases. I use AI as a serious production tool for planning, prompting, coding, testing, content generation, and iteration — but it sits on a solid grasp of the <span className="text-foreground">fundamentals</span>: how the web works, clean code, data modeling, and debugging. AI speeds me up; understanding the fundamentals is what makes the output actually hold up.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
-                With hands-on experience in <span className="text-foreground">React, TypeScript, Next.js, Tailwind, Supabase, and PostgreSQL</span>, I pair traditional web development with AI-assisted workflows using <span className="text-primary">Claude, Gemini, OpenAI, Veo, Pika, and ElevenLabs</span>. I leverage tools like <span className="text-primary">Cursor, Copilot, Windsurf, and Codex</span> to move from idea to prototype to deployed product quickly.
+                I work hands-on with <span className="text-foreground">React, TypeScript, Next.js, Tailwind, Supabase, and PostgreSQL</span> — but those are tools, not a hard limit. Because I build AI-first with <span className="text-primary">Claude Opus, Gemini, OpenAI, Veo, Pika, and ElevenLabs</span> and editors like <span className="text-primary">Cursor, Copilot, Windsurf, and Codex</span>, I stay stack-flexible and pick whatever fits the project instead of forcing one fixed setup.
               </p>
               <p className="text-muted-foreground leading-relaxed text-base">
                 Beyond software, I'm skilled in <span className="text-foreground">hardware — PC assembly, disassembly, and troubleshooting</span>. I also create AI-assisted scripts, visuals, voiceovers, product animations, and short-form content. I deploy on <span className="text-foreground">Vercel, Cloudflare Workers, and Docker</span> because production means infrastructure, not just code.
