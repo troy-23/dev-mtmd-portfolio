@@ -4,6 +4,10 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Base path the app is served from. On GitHub Pages project sites the app
+  // lives under /<repo>/, so the deploy workflow sets VITE_BASE accordingly.
+  // Locally (and on a custom domain / user page) it defaults to "/".
+  base: process.env.VITE_BASE ?? "/",
   server: {
     host: "::",
     port: 8080,
