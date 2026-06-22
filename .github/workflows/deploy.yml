@@ -29,12 +29,9 @@ jobs:
 
       - run: npm ci
 
+      # Served from the site root https://troy-23.github.io/
+      # (repo must be named troy-23.github.io). No VITE_BASE needed; defaults to "/".
       - name: Build
-        env:
-          # Served from https://<user>.github.io/dev-mtmd-portfolio/
-          # If you rename the repo to <user>.github.io or add a custom domain,
-          # change this to "/" (or delete the env block).
-          VITE_BASE: /dev-mtmd-portfolio/
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

@@ -8,11 +8,11 @@
       into a query string and bounces to index.html, where the script in
       <head> restores the original path so react-router can handle it.
 
-      pathSegmentsToKeep = 1  -> project page served from /<repo>/ (current setup)
-      pathSegmentsToKeep = 0  -> user page or custom domain served from /
+      pathSegmentsToKeep = 0  -> user page or custom domain served from / (current setup)
+      pathSegmentsToKeep = 1  -> project page served from /<repo>/
     -->
     <script>
-      var pathSegmentsToKeep = 1;
+      var pathSegmentsToKeep = 0;
       var l = window.location;
       l.replace(
         l.protocol +
