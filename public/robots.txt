@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://dev-mtmd-portfolio.vercel.app/sitemap.xml
+Sitemap: https://troy-23.github.io/sitemap.xml

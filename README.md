@@ -4,7 +4,7 @@ A personal portfolio for an AI-assisted full-stack developer & freelance web dev
 Built with Vite, React, TypeScript, Tailwind CSS, and shadcn/ui, with a terminal/cyberpunk
 aesthetic, smooth Lenis scrolling, and a Web3Forms-powered contact form.
 
-**Live:** https://dev-mtmd-portfolio.vercel.app
+**Live:** https://troy-23.github.io
 
 ## Tech Stack
 
