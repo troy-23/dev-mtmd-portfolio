@@ -9,7 +9,7 @@ const projectsData = [
     image: "/screenshots/quinnfall.jpg",
     description: "A responsive music library where people can stream audio and video, with song details and play counts handled through Redis. I built the custom admin tools, secure server-side authentication, and graceful media fallbacks, then hardened everything for production.",
     project_url: "https://quinnfall-music.vercel.app/",
-    tech_stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel", "Redis/KV"],
+    tech_stack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Redis/KV", "Supabase Storage", "Cloudflare R2", "Vercel"],
   },
   {
     id: "10",
