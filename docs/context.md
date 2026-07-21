@@ -45,6 +45,7 @@ Hero → Featured Work (projects) → Services → Stacks → About → Contact 
 
 ## Known follow-ups
 
-- Two project demos are still hosted on `*.lovable.app` (YortyCollects, Hypertroyphy).
-  Re-deploy them off Lovable and update the URLs if "Lovable traces" must be fully gone.
+- One project demo is still hosted on `*.lovable.app` (Hypertroyphy). YortyCollects was
+  redeployed off Lovable (now a Vite + React static site on Vercel) and its portfolio
+  entry updated to `https://yortycollects.vercel.app/` (2026-07-21).
 - The downloadable resume PDF / `scripts/generate-resume.mjs` still contains the gmail.

@@ -2,6 +2,16 @@
 
 Status log for the portfolio. Newest first.
 
+## 2026-07-21
+
+- YortyCollects project demo now off Lovable — URL updated to
+  `https://yortycollects.vercel.app/`, tech stack corrected to what it actually runs
+  (React, TypeScript, Vite, Tailwind CSS, Zustand, Radix UI, Vercel), and its screenshot
+  refreshed to the current live site.
+- Refreshed screenshots for Kaelveyra and Hireyert (were mid dashboard-animation).
+- Reordered Featured Work: Quinnfall Music, Ruth Yap — Writer, YortyCollects, RMC
+  Collective Studio, then the rest unchanged.
+
 ## 2026-06-22
 
 ### Content / positioning
