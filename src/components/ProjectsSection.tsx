@@ -18,7 +18,7 @@ const projectsData = [
     image: "/screenshots/ruthyap.jpg",
     description: "A portfolio for a professional writer, designed around the writing itself with clean typography, smooth Lenis scrolling, and subtle Framer Motion touches.",
     project_url: "https://ruthyap-writer.vercel.app/",
-    tech_stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS v4", "Framer Motion", "Radix UI", "Lenis"],
+    tech_stack: ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS v4", "Framer Motion", "Radix UI", "Lenis", "Supabase", "Vercel"],
   },
   {
     id: "5",
