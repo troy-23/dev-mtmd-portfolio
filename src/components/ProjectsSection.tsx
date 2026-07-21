@@ -48,15 +48,6 @@ const projectsData = [
     tech_stack: ["React", "Tailwind CSS", "TypeScript"],
   },
   {
-    id: "3",
-    title: "Hireyert",
-    type: "Web App",
-    image: "/screenshots/hireyert.jpg",
-    description: "A hiring and recruiting app built on a modern Next.js stack. It pairs reusable Radix UI components with smooth form flows, clear charts, and subtle animation, all deployed on Vercel.",
-    project_url: "https://hireyert.vercel.app/",
-    tech_stack: ["Next.js 16.2.6", "React 19", "TypeScript", "Tailwind CSS v4", "Radix UI", "Framer Motion", "Recharts", "Vercel"],
-  },
-  {
     id: "4",
     title: "Kaelveyra",
     type: "Dashboard",
@@ -79,9 +70,9 @@ const projectsData = [
     title: "Casimiro GPU Repair Shop",
     type: "Landing Page",
     image: "/screenshots/casimiro.jpg",
-    description: "A landing page for a GPU repair shop with service-focused copy and responsive sections. GSAP scroll animations add a layer of polish, and it's deployed and ready for real customers.",
+    description: "A landing page for a GPU repair shop with service-focused copy and responsive sections. Scroll-reveal built with lightweight CSS transitions and IntersectionObserver, deployed and ready for real customers.",
     project_url: "https://casimiro-gpu-repair-shop.vercel.app/",
-    tech_stack: ["React 19", "TypeScript", "Vite 6", "Tailwind CSS v4", "GSAP", "Framer Motion", "Lucide React", "Vercel"],
+    tech_stack: ["React 19", "TypeScript", "Vite 6", "Tailwind CSS v4", "Lucide React", "Vercel"],
   },
   {
     id: "8",
@@ -100,6 +91,15 @@ const projectsData = [
     description: "A personal portfolio hand-built in vanilla HTML, CSS, and JavaScript, with smooth GSAP scroll animations and a clean, content-first layout.",
     project_url: "https://jcb-portfolio-6.vercel.app/",
     tech_stack: ["HTML5", "CSS3", "JavaScript", "GSAP", "Vercel"],
+  },
+  {
+    id: "3",
+    title: "Hireyert",
+    type: "Web App",
+    image: "/screenshots/hireyert.jpg",
+    description: "A hiring and recruiting app built on a modern Next.js stack. It pairs reusable Radix UI components with smooth form flows, clear charts, and subtle animation, all deployed on Vercel.",
+    project_url: "https://hireyert.vercel.app/",
+    tech_stack: ["Next.js 16.2.6", "React 19", "TypeScript", "Tailwind CSS v4", "Radix UI", "Framer Motion", "Recharts", "Vercel"],
   },
 ];
 
